@@ -1,10 +1,10 @@
 <html>
 	<header>
-		<title>Hello World</title>
+		<title>Why World</title>
 	</header>
 
 	<body>
 		<?php include_once("phpincludes/navigation.php"); ?>
-	  <h1>WHy World</h1>
+	  <h1>Why World, Why</h1>
 	</body>
 </html>
