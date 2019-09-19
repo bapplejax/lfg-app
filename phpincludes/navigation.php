@@ -1,4 +1,4 @@
-<?php
+<?php ?>
 <nav>
 		<ul>
 			<li<?php if ($thisPage=="Home") echo " class=\"active\""; ?>><a href="#">Home</a></li>
@@ -8,4 +8,3 @@
 			<li<?php if ($thisPage=="Contact") echo " class=\"active\""; ?>><a href="#">Contact</a></li>
 		</ul>
 	</nav>
-?>
