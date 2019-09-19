@@ -12,8 +12,8 @@
 
 <body>
 	<h1>How about now</h1>
-	<?php echo "WHAY"; ?>
-	<?php require_once('navigation.php'); ?>
+	<?php echo "WHAasdfY"; ?>
+	<?php require_once('/navigation.php'); ?>
 	<?php
 		define('__ROOT__', dirname(dirname(__FILE__)));
 		require_once(__ROOT__.'/navigation.php');
