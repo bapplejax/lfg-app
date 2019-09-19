@@ -12,6 +12,7 @@
 
 <body>
 	<h1>How about now</h1>
+	<?php echo "WHAY"; ?>
 	<?php
 		define('__ROOT__', dirname(dirname(__FILE__)));
 		require_once(__ROOT__.'/phpincludes/navigation.php');
