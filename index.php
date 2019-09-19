@@ -13,9 +13,10 @@
 <body>
 	<h1>How about now</h1>
 	<?php echo "WHAY"; ?>
+	<?php require_once('navigation.php'); ?>
 	<?php
 		define('__ROOT__', dirname(dirname(__FILE__)));
-		require_once(__ROOT__.'/phpincludes/navigation.php');
+		require_once(__ROOT__.'/navigation.php');
 	?>	
   <h1>Hello Woild</h1>
 </body>
