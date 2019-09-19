@@ -4,7 +4,10 @@
 	</header>
 
 	<body>
-		<?php include_once("phpincludes/navigation.php"); ?>
+		<?php 
+			include("phpincludes/navigation.php"); 
+		?>
+		
 	  <h1>Why World, Why</h1>
 	</body>
 </html>
