@@ -1,8 +1,9 @@
 <?php ?>
 <div class="lfg-header__top">
-	<img class="lfg-header__logo" src="https://www.fillmurray.com/200/75" />
-
-	<p class="lfg-header__title">LOOKING<br/><span>for group</span></p>
+    <div class="lfg-header__left">
+    <img class="lfg-header__logo" src="https://www.fillmurray.com/200/75" />
+    <p class="lfg-header__title">LOOKING<br/><span>for group</span></p>
+  </div>
 
 	<div class="lfg-header__search-container">
 		<div class="lfg-header__search-icon">

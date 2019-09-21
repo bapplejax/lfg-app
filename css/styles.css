@@ -1,15 +1,15 @@
-.lfg-header,
+.lfg-header__top, .lfg-header__bottom,
 .container {
   display: block;
   max-width: 1200px;
   padding: 0 25px;
   width: 100%; }
   @media all and (max-width: 37.4375em) {
-    .lfg-header,
+    .lfg-header__top, .lfg-header__bottom,
     .container {
       padding: 0 15px; } }
 
-.lfg-banner,
+.lfg-banner, .lfg-header,
 .container--full {
   display: block;
   margin: 0;
@@ -41,5 +41,9 @@ h3 {
   flex-wrap: nowrap;
   justify-content: space-between;
   width: 100%; }
+
+.lfg-nav {
+  display: inline-block;
+  list-style-type: none; }
 
 /*# sourceMappingURL=styles.css.map */

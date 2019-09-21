@@ -1,6 +1,6 @@
 <?php ?>
-<nav class="lfg-nav">
-	<ul>
+<nav>
+	<ul class="lfg-nav">
 		<li<?php if ($thisPage=="Home") echo " class=\"active\""; ?>><a href="index.php">Home</a></li>
 		<li<?php if ($thisPage=="About") echo " class=\"active\""; ?>><a href="about.php">About</a></li>
 		<li<?php if ($thisPage=="Games") echo " class=\"active\""; ?>><a href="games.php">Games</a></li>
