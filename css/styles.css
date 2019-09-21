@@ -17,9 +17,6 @@
   padding: 0;
   width: 100%; }
 
-.lfg-header {
-  display: flex; }
-
 body {
   font-size: 16px;
   margin: 0; }
@@ -32,5 +29,17 @@ h2 {
 
 h3 {
   font-size: 2rem; }
+
+.lfg-header {
+  background: #504b52;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap; }
+
+.lfg-header__top {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 100%; }
 
 /*# sourceMappingURL=styles.css.map */
