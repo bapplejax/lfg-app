@@ -10,7 +10,7 @@
     .container {
       padding: 0 15px; } }
 
-.lfg-banner, .lfg-header,
+.lfg-banner__container, .lfg-header,
 .container--full {
   display: block;
   margin: 0;
@@ -51,12 +51,15 @@ a {
   background-color: #f58e29;
   color: #fff; }
 
-.lfg-banner {
+.lfg-banner__container {
   position: relative; }
 
 .lfg-banner__image {
   max-width: 100%;
   width: 100%; }
+
+.lfg-banner__title {
+  margin: 0; }
 
 .lfg-banner__text-area {
   position: absolute;
@@ -67,6 +70,7 @@ a {
   border-radius: 3px;
   color: #fff;
   max-width: 1200px;
+  padding: 20px;
   text-align: center;
   width: 75%; }
 
