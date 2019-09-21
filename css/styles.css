@@ -1,3 +1,12 @@
+.container {
+  display: block;
+  max-width: 1200px;
+  padding: 0 25px;
+  width: 100%; }
+  @media all and (max-width: 37.4375em) {
+    .container {
+      padding: 0 15px; } }
+
 .lfg-header {
   display: flex;
   width: 100%; }
