@@ -31,6 +31,9 @@ h2 {
 h3 {
   font-size: 2rem; }
 
+a {
+  text-decoration: none; }
+
 .button {
   border-radius: 3px;
   display: block;
@@ -47,6 +50,19 @@ h3 {
 .button--secondary {
   background-color: #f58e29;
   color: #fff; }
+
+.lfg-banner__image {
+  max-width: 100%;
+  width: 100%; }
+
+.lfg-banner__text-area {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 3px;
+  color: #fff;
+  max-width: 1200px;
+  position: absolute;
+  text-align: center;
+  width: 75%; }
 
 .lfg-header {
   background: #504b52;
@@ -74,6 +90,7 @@ h3 {
     width: 100%; }
 
 .lfg-header__right {
+  text-align: right;
   width: 23%; }
 
 .lfg-nav {
