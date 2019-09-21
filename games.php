@@ -1,4 +1,4 @@
-<?php $thisPage="Home"; ?>
+<?php $thisPage="Games"; ?>
 <html>
 	<?php require_once('phpincludes/head.php'); ?>
 	<body>

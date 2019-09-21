@@ -1,4 +1,4 @@
-<?php $thisPage="Home"; ?>
+<?php $thisPage="About"; ?>
 <html>
 	<?php require_once('phpincludes/head.php'); ?>
 	<body>
