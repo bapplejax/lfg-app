@@ -1,5 +1,5 @@
 <?php ?>
-<img class="lfg-banner__image" src="https://www.fillmurray.com/2000/400" alt="Banner Image" />
+<img class="lfg-banner__image" src="https://www.fillmurray.com/2000/700" alt="Banner Image" />
 <!-- @TODO add in logic for logged in/premium/anonymous to change out text and cta -->
 <div class="lfg-banner__text-area">
   <h1 class="lfg-banner__title">Welcome to <br/><em>Looking for Group</em></h1>

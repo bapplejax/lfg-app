@@ -51,16 +51,22 @@ a {
   background-color: #f58e29;
   color: #fff; }
 
+.lfg-banner {
+  position: relative; }
+
 .lfg-banner__image {
   max-width: 100%;
   width: 100%; }
 
 .lfg-banner__text-area {
-  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.5);
   border-radius: 3px;
   color: #fff;
   max-width: 1200px;
-  position: absolute;
   text-align: center;
   width: 75%; }
 
@@ -71,14 +77,14 @@ a {
   flex-wrap: wrap; }
 
 .lfg-header__top {
+  align-items: center;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
   width: 100%; }
 
 .lfg-header__left {
-  display: flex;
-  width: 23%; }
+  display: flex; }
 
 .lfg-header__title {
   display: inline-block;
@@ -90,8 +96,7 @@ a {
     width: 100%; }
 
 .lfg-header__right {
-  text-align: right;
-  width: 23%; }
+  text-align: right; }
 
 .lfg-nav {
   display: inline-block;
