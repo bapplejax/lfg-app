@@ -1,6 +1,7 @@
 .lfg-header__top, .lfg-header__bottom,
 .container {
   display: block;
+  margin: 0 auto;
   max-width: 1200px;
   padding: 0 25px;
   width: 100%; }
@@ -30,6 +31,23 @@ h2 {
 h3 {
   font-size: 2rem; }
 
+.button {
+  border-radius: 3px;
+  display: block;
+  margin: 0 auto;
+  max-width: 300px;
+  padding: 10px 20px;
+  text-align: center;
+  width: 100%; }
+
+.button--primary {
+  background-color: #004fb1;
+  color: #fff; }
+
+.button--secondary {
+  background-color: #f58e29;
+  color: #fff; }
+
 .lfg-header {
   background: #504b52;
   color: #fff;
@@ -42,8 +60,35 @@ h3 {
   justify-content: space-between;
   width: 100%; }
 
+.lfg-header__left {
+  display: flex;
+  width: 23%; }
+
+.lfg-header__title {
+  display: inline-block;
+  margin-left: 10px; }
+
+.lfg-header__search-container {
+  width: 50%; }
+  .lfg-header__search-container input {
+    width: 100%; }
+
+.lfg-header__right {
+  width: 23%; }
+
 .lfg-nav {
   display: inline-block;
-  list-style-type: none; }
+  list-style-type: none;
+  margin: 15px 0;
+  padding: 0; }
+  .lfg-nav li {
+    display: inline-block;
+    margin-right: 20px; }
+    .lfg-nav li:last-of-type {
+      margin-right: 0; }
+    .lfg-nav li a {
+      color: #f58e29;
+      display: inline-block;
+      padding: 8px 10px; }
 
 /*# sourceMappingURL=styles.css.map */
