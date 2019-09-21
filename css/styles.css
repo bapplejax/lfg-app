@@ -9,11 +9,19 @@
     .container {
       padding: 0 15px; } }
 
+.container--full {
+  display: block;
+  margin: 0;
+  max-width: none;
+  padding: 0;
+  width: 100%; }
+
 .lfg-header {
   display: flex; }
 
 body {
-  font-size: 16px; }
+  font-size: 16px;
+  margin: 0; }
 
 h1 {
   font-size: 3rem; }

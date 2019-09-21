@@ -3,6 +3,8 @@
 	<?php require_once('phpincludes/head.php'); ?>
 	<body>
 		<?php require_once('phpincludes/header.php'); ?>
-	  <h1>Hello World</h1>
+		<div class="container--full lfg-banner__container">
+			<?php require_once('phpincludes/banner.php'); ?>
+	  </div>
 	</body>
 </html>
