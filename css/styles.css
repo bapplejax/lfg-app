@@ -126,6 +126,8 @@ a {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
+  padding-bottom: 10px;
+  padding-top: 10px;
   width: 100%; }
 
 .lfg-header__left {
@@ -136,8 +138,20 @@ a {
   margin-left: 10px; }
 
 .lfg-header__search-container {
+  padding: 10px 10px 10px 25px;
+  position: relative;
   width: 50%; }
+  .lfg-header__search-container::before {
+    content: url(/img/icons/search.svg);
+    height: 25px;
+    left: 10px;
+    position: absolute;
+    top: 10px;
+    width: 25px; }
   .lfg-header__search-container input {
+    font-size: 20px;
+    font-size: 1.25rem;
+    border: none;
     width: 100%; }
 
 .lfg-header__right {
