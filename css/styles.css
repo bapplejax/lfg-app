@@ -1,4 +1,4 @@
-.lfg-banner__text-area, .lfg-header__top, .lfg-header__bottom,
+.lfg-banner__text-area, .lfg-footer__inner, .lfg-header__top, .lfg-header__bottom,
 .container {
   display: block;
   margin: 0 auto;
@@ -6,11 +6,11 @@
   padding: 0 25px;
   width: 100%; }
   @media all and (max-width: 37.4375em) {
-    .lfg-banner__text-area, .lfg-header__top, .lfg-header__bottom,
+    .lfg-banner__text-area, .lfg-footer__inner, .lfg-header__top, .lfg-header__bottom,
     .container {
       padding: 0 15px; } }
 
-.lfg-banner__container, .lfg-header,
+.lfg-banner__container, .lfg-footer, .lfg-header,
 .container--full {
   display: block;
   margin: 0;
@@ -115,6 +115,19 @@ a {
     .lfg-banner__text-area {
       width: calc(100% - 30px); } }
 
+.lfg-footer {
+  background: #504b52; }
+  .lfg-footer p,
+  .lfg-footer a {
+    color: #fff; }
+
+.lfg-footer__inner {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  padding-top: 20px; }
+
 .lfg-header {
   background: #504b52;
   color: #fff;
@@ -143,12 +156,13 @@ a {
   position: relative;
   width: 50%; }
   .lfg-header__search-container::before {
-    content: url(/img/icons/search.png);
-    height: 20px;
+    background-image: url(/img/icons/search.png);
+    background-size: contain;
+    content: '';
     left: 10px;
+    padding: 10px;
     position: absolute;
-    top: 13px;
-    width: 20px; }
+    top: 13px; }
   .lfg-header__search-container input {
     font-size: 20px;
     font-size: 1.25rem;
@@ -163,12 +177,12 @@ a {
   text-align: right; }
 
 .lfg-header__twitter {
-  margin-right: 8px;
   width: 20px; }
 
 .lfg-header__login {
   color: #fff;
-  display: flex; }
+  display: flex;
+  margin-left: 10px; }
   .lfg-header__login img {
     margin-right: 3px;
     width: 20px; }

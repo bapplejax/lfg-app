@@ -11,5 +11,9 @@
 		<div class="lfg-banner__container">
 			<?php require_once('phpincludes/banner.php'); ?>
 	  </div>
+
+    <div class="lfg-footer">
+      <?php require_once('phpincludes/footer.php'); ?>
+    </div>
 	</body>
 </html>
