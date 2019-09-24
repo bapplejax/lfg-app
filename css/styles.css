@@ -1,4 +1,4 @@
-.lfg-banner__text-area, .lfg-footer__inner, .lfg-header__top, .lfg-header__bottom,
+.lfg-banner__text-area, .lfg-footer__inner, .lfg-header__top, .lfg-header__bottom, .lfg-cards__inner,
 .container {
   display: block;
   margin: 0 auto;
@@ -6,17 +6,32 @@
   padding: 0 25px;
   width: 100%; }
   @media all and (max-width: 37.4375em) {
-    .lfg-banner__text-area, .lfg-footer__inner, .lfg-header__top, .lfg-header__bottom,
+    .lfg-banner__text-area, .lfg-footer__inner, .lfg-header__top, .lfg-header__bottom, .lfg-cards__inner,
     .container {
       padding: 0 15px; } }
 
-.lfg-banner__container, .lfg-footer, .lfg-header,
+.lfg-banner__container, .lfg-footer, .lfg-header, .lfg-cards__container,
 .container--full {
   display: block;
   margin: 0;
   max-width: none;
   padding: 0;
   width: 100%; }
+
+.three-quarter-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%; }
+  .three-quarter-container:first-child {
+    width: 73%; }
+  .three-quarter-container:nth-child(2) {
+    width: 23%; }
+  @media all and (max-width: 56.1875em) {
+    .three-quarter-container:first-child {
+      width: 100%; }
+    .three-quarter-container:nth-child(2) {
+      width: 100%; } }
 
 body {
   font-family: 'Oswald', sans-serif;
@@ -116,10 +131,11 @@ a {
       width: calc(100% - 30px); } }
 
 .lfg-footer {
-  background: #504b52; }
+  background: #fff; }
   .lfg-footer p,
   .lfg-footer a {
-    color: #fff; }
+    color: #504b52;
+    margin: 0; }
 
 .lfg-footer__inner {
   display: flex;
@@ -188,6 +204,10 @@ a {
     width: 20px; }
   .lfg-header__login:hover {
     text-decoration: underline; }
+
+.lfg-cards__inner {
+  padding-bottom: 20px;
+  padding-top: 20px; }
 
 .lfg-nav {
   display: inline-block;
