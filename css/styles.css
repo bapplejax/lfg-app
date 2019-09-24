@@ -142,14 +142,14 @@ a {
     margin-right: 20px; }
     .lfg-nav li:last-of-type {
       margin-right: 0; }
+    .lfg-nav li.active a {
+      color: #F9BB7E;
+      text-decoration: underline; }
     .lfg-nav li a {
       color: #f58e29;
       display: inline-block;
       padding: 8px 10px; }
       .lfg-nav li a:hover {
-        color: #F9BB7E;
-        text-decoration: underline; }
-      .lfg-nav li a.active {
         color: #F9BB7E;
         text-decoration: underline; }
 
