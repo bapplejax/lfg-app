@@ -33,7 +33,7 @@
     .three-quarter-container > div:nth-child(2) {
       width: 100%; } }
 
-.lfg-cards__results:after {
+.lfg-cards__results:after, .lfg-cards__form:after {
   content: "";
   display: table;
   clear: both; }
@@ -177,6 +177,7 @@ a {
 
 .lfg-header__search-container {
   background: #fff;
+  border-radius: 3px;
   padding: 10px 10px 10px 35px;
   position: relative;
   width: 50%; }
@@ -197,6 +198,7 @@ a {
       outline: none; }
 
 .lfg-header__right {
+  align-items: center;
   display: flex;
   flex-wrap: nowrap;
   text-align: right; }
@@ -228,13 +230,47 @@ a {
   .lfg-card img {
     width: 100%; }
 
+.lfg-card__title {
+  margin: 5px 0; }
+
 .lfg-card__platforms {
   background: #fff;
   border-radius: 3px;
+  display: inline-block;
+  line-height: 1;
   padding: 5px; }
   .lfg-card__platforms img {
     display: inline-block;
-    width: 25px; }
+    height: 25px;
+    width: auto; }
+    .lfg-card__platforms img:not(:first-of-type) {
+      margin-left: 5px; }
+
+.lfg-cards__form {
+  display: block; }
+
+.lfg-cards__select {
+  float: left;
+  margin-bottom: 12px;
+  margin-right: 12px;
+  width: calc(25% - 9px); }
+  .lfg-cards__select label {
+    color: #cccccc;
+    display: block; }
+  .lfg-cards__select select {
+    background: #1c1a1d;
+    border-color: #000;
+    border-radius: 3px;
+    color: #fff;
+    display: block;
+    width: 100%; }
+
+.lfg-cards__search {
+  float: left;
+  background: #004fb1;
+  border-radius: 3px;
+  border-color: #004fb1;
+  width: calc(25% - 9px); }
 
 .lfg-nav {
   display: inline-block;
