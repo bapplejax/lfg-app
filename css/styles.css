@@ -1,4 +1,4 @@
-.lfg-header__top, .lfg-header__bottom,
+.lfg-banner__text-area, .lfg-header__top, .lfg-header__bottom,
 .container {
   display: block;
   margin: 0 auto;
@@ -6,7 +6,7 @@
   padding: 0 25px;
   width: 100%; }
   @media all and (max-width: 37.4375em) {
-    .lfg-header__top, .lfg-header__bottom,
+    .lfg-banner__text-area, .lfg-header__top, .lfg-header__bottom,
     .container {
       padding: 0 15px; } }
 
@@ -72,11 +72,20 @@ a {
     background-color: #F9BB7E; }
 
 .lfg-banner__container {
+  overflow: hidden;
   position: relative; }
+  @media all and (max-width: 56.1875em) {
+    .lfg-banner__container {
+      height: 350px; } }
 
 .lfg-banner__image {
   max-width: 100%;
   width: 100%; }
+  @media all and (max-width: 56.1875em) {
+    .lfg-banner__image {
+      height: 350px;
+      max-width: none;
+      width: auto; } }
 
 .lfg-banner__title {
   font-size: 40px;
@@ -99,10 +108,8 @@ a {
   background: rgba(0, 0, 0, 0.7);
   border-radius: 3px;
   color: #fff;
-  max-width: 1200px;
-  padding: 20px;
-  text-align: center;
-  width: 75%; }
+  padding: 35px 20px 40px;
+  text-align: center; }
 
 .lfg-header {
   background: #504b52;
