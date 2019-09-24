@@ -37,19 +37,19 @@ h3 {
   font-size: 2rem; }
 
 a {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   text-decoration: none; }
 
 .button {
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
-  transition: background-color 0.3s ease;
-  -webkit-transition: color 0.3s ease;
-  -moz-transition: color 0.3s ease;
-  -ms-transition: color 0.3s ease;
-  -o-transition: color 0.3s ease;
-  transition: color 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   border-radius: 3px;
   display: block;
   font-weight: 600;
@@ -146,5 +146,11 @@ a {
       color: #f58e29;
       display: inline-block;
       padding: 8px 10px; }
+      .lfg-nav li a:hover {
+        color: #F9BB7E;
+        text-decoration: underline; }
+      .lfg-nav li a.active {
+        color: #F9BB7E;
+        text-decoration: underline; }
 
 /*# sourceMappingURL=styles.css.map */
