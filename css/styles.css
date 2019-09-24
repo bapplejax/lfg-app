@@ -1,4 +1,4 @@
-.lfg-banner__text-area, .lfg-footer__inner, .lfg-header__top, .lfg-header__bottom, .lfg-cards__inner,
+.lfg-main-content__inner, .lfg-banner__text-area, .lfg-footer__inner, .lfg-header__top, .lfg-header__bottom,
 .container {
   display: block;
   margin: 0 auto;
@@ -6,11 +6,11 @@
   padding: 0 25px;
   width: 100%; }
   @media all and (max-width: 37.4375em) {
-    .lfg-banner__text-area, .lfg-footer__inner, .lfg-header__top, .lfg-header__bottom, .lfg-cards__inner,
+    .lfg-main-content__inner, .lfg-banner__text-area, .lfg-footer__inner, .lfg-header__top, .lfg-header__bottom,
     .container {
       padding: 0 15px; } }
 
-.lfg-banner__container, .lfg-footer, .lfg-header, .lfg-cards__container,
+.lfg-main-content__container, .lfg-banner__container, .lfg-footer, .lfg-header,
 .container--full {
   display: block;
   margin: 0;
@@ -23,15 +23,20 @@
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%; }
-  .three-quarter-container:first-child {
+  .three-quarter-container > div:first-child {
     width: 73%; }
-  .three-quarter-container:nth-child(2) {
+  .three-quarter-container > div:nth-child(2) {
     width: 23%; }
   @media all and (max-width: 56.1875em) {
-    .three-quarter-container:first-child {
+    .three-quarter-container > div:first-child {
       width: 100%; }
-    .three-quarter-container:nth-child(2) {
+    .three-quarter-container > div:nth-child(2) {
       width: 100%; } }
+
+.lfg-cards__results:after {
+  content: "";
+  display: table;
+  clear: both; }
 
 body {
   font-family: 'Oswald', sans-serif;
@@ -85,6 +90,10 @@ a {
   color: #fff; }
   .button--secondary:hover {
     background-color: #F9BB7E; }
+
+.lfg-main-content__container {
+  padding-bottom: 20px;
+  padding-top: 20px; }
 
 .lfg-banner__container {
   overflow: hidden;
@@ -205,9 +214,27 @@ a {
   .lfg-header__login:hover {
     text-decoration: underline; }
 
-.lfg-cards__inner {
-  padding-bottom: 20px;
-  padding-top: 20px; }
+.lfg-cards__results {
+  display: inline-block;
+  width: 100%; }
+
+.lfg-card {
+  float: left;
+  margin-bottom: 12px;
+  margin-right: 12px;
+  width: calc(25% - 9px); }
+  .lfg-card:nth-of-type(4n) {
+    margin-right: 0; }
+  .lfg-card img {
+    width: 100%; }
+
+.lfg-card__platforms {
+  background: #fff;
+  border-radius: 3px;
+  padding: 5px; }
+  .lfg-card__platforms img {
+    display: inline-block;
+    width: 25px; }
 
 .lfg-nav {
   display: inline-block;
@@ -231,5 +258,9 @@ a {
       .lfg-nav li a:hover {
         color: #F9BB7E;
         text-decoration: underline; }
+
+#Home .lfg-main-content__container {
+  background-color: #504b52;
+  color: #fff; }
 
 /*# sourceMappingURL=styles.css.map */

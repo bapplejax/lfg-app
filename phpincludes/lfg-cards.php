@@ -46,35 +46,35 @@
 
 <div class="lfg-cards__results">
   <div class="lfg-card">
-    <img src="https://www.fillmurray.com/100/275" />
+    <img src="https://www.fillmurray.com/400/800" />
     <p class="lfg-card__title">Game Title</p>
     <div class="lfg-card__platforms">
       <img src="/img/icons/pc.jpg" alt="" />
     </div>
   </div>
   <div class="lfg-card">
-    <img src="https://www.fillmurray.com/100/275" />
+    <img src="https://www.fillmurray.com/400/800" />
     <p class="lfg-card__title">Game Title</p>
     <div class="lfg-card__platforms">
       <img src="/img/icons/playstation.png" alt="" />
     </div>
   </div>
   <div class="lfg-card">
-    <img src="https://www.fillmurray.com/100/275" />
+    <img src="https://www.fillmurray.com/400/800" />
     <p class="lfg-card__title">Game Title</p>
     <div class="lfg-card__platforms">
       <img src="/img/icons/xbox.png" alt="" />
     </div>
   </div>
   <div class="lfg-card">
-    <img src="https://www.fillmurray.com/100/275" />
+    <img src="https://www.fillmurray.com/400/800" />
     <p class="lfg-card__title">Game Title</p>
     <div class="lfg-card__platforms">
       <img src="/img/icons/switch.png" alt="" />
     </div>
   </div>
   <div class="lfg-card">
-    <img src="https://www.fillmurray.com/100/275" />
+    <img src="https://www.fillmurray.com/400/800" />
     <p class="lfg-card__title">Game Title</p>
     <div class="lfg-card__platforms">
       <img src="/img/icons/pc.jpg" alt="" />

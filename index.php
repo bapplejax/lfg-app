@@ -3,7 +3,7 @@
 
 	<?php require_once('phpincludes/head.php'); ?>
 
-	<body>
+	<body id="<?php echo $thisPage; ?>">
 		<div class="lfg-header">
 			<?php require_once('phpincludes/header.php'); ?>
 		</div>
@@ -15,7 +15,7 @@
     <div class="lfg-main-content__container">
       <div class="lfg-main-content__inner three-quarter-container">
         <div class="lfg-cards__container">
-          <?php require_once('phpincludes/homepage-cards.php'); ?>
+          <?php require_once('phpincludes/lfg-cards.php'); ?>
         </div>
 
         <div class="lfg-sidebar">
