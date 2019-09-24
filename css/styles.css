@@ -108,8 +108,12 @@ a {
   background: rgba(0, 0, 0, 0.7);
   border-radius: 3px;
   color: #fff;
-  padding: 35px 20px 40px;
-  text-align: center; }
+  padding: 35px 0 40px;
+  text-align: center;
+  width: calc(100% - 50px); }
+  @media all and (max-width: 37.4375em) {
+    .lfg-banner__text-area {
+      width: calc(100% - 30px); } }
 
 .lfg-header {
   background: #504b52;
