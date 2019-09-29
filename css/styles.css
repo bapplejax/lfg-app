@@ -270,17 +270,34 @@ a {
       outline: none; }
 
 .lfg-cards__search {
+  -webkit-transition: background 0.3s ease;
+  -moz-transition: background 0.3s ease;
+  -ms-transition: background 0.3s ease;
+  -o-transition: background 0.3s ease;
+  transition: background 0.3s ease;
   background: #004fb1;
   border-radius: 3px;
   border-color: #004fb1;
+  bottom: -28px;
   color: #fff;
   cursor: pointer;
   float: left;
   font-weight: 600;
   height: 30px;
+  position: relative;
   width: calc(25% - 9px); }
   .lfg-cards__search:focus {
     outline: none; }
+  .lfg-cards__search:hover {
+    background: #0186c2; }
+
+.lfg-cards__filter-btn {
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 8px 14px; }
+  .lfg-cards__filter-btn.active {
+    background-color: #0186c2; }
 
 .lfg-nav {
   display: inline-block;
