@@ -19,7 +19,7 @@ class Dao {
   public function createUser($username, $password) {
     $conn = $this->getConnection();
     try {
-      return $conn->query("INSERT INTO user(username,password) VALUES ($username,$password)", PDO::FETCH_ASSOC);
+      return $conn->query("INSERT INTO test_user(username,password) VALUES ($username,$password)", PDO::FETCH_ASSOC);
     } catch(Exception $e) {
       echo print_r($e,1);
       exit;
