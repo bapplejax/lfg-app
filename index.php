@@ -2,6 +2,7 @@
   $thisPage="Home";
   session_start();
 ?>
+
 <html>
 
 	<?php require_once('phpincludes/head.php'); ?>
@@ -20,7 +21,7 @@
         <div class="lfg-cards__container">
 
           <form action="phpincludes/create_user.php" method="post">
-            <div>Create user</div>
+            <div>Create your user</div>
             <label for="username">Username</label>
             <input type="text" name="username" required />
             <label for="password">Password</label>
