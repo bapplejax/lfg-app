@@ -21,7 +21,7 @@
         <div class="lfg-cards__container">
 
           <form action="phpincludes/create_user.php" method="post">
-            <div>Create your user</div>
+            <div>Create your first user</div>
             <label for="username">Username</label>
             <input type="text" name="username" required />
             <label for="password">Password</label>
