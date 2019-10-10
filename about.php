@@ -1,4 +1,8 @@
-<?php $thisPage="About"; ?>
+<?php
+  $thisPage="About";
+  session_start();
+?>
+
 <html>
 
   <?php require_once('phpincludes/head.php'); ?>

@@ -1,4 +1,7 @@
-<?php $thisPage="Contact"; ?>
+<?php
+  $thisPage="Contact";
+  session_start();
+?>
 <html>
 
   <?php require_once('phpincludes/head.php'); ?>

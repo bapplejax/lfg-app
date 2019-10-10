@@ -1,4 +1,8 @@
-<?php $thisPage="Games"; ?>
+<?php
+  $thisPage="Games";
+  session_start();
+?>
+
 <html>
 
   <?php require_once('phpincludes/head.php'); ?>

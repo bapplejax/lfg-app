@@ -1,4 +1,8 @@
-<?php $thisPage="Premium"; ?>
+<?php
+  $thisPage="Premium";
+  session_start();
+?>
+
 <html>
 
   <?php require_once('phpincludes/head.php'); ?>
