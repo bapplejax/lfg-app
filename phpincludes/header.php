@@ -15,7 +15,7 @@
 	<div class="lfg-header__right">
 		<a href="#"><img class="lfg-header__twitter" src="/img/icons/twitter.png" alt="twitter icon" /></a>
 		<!-- @TODO have an if statement for login status to change out icons/words -->
-		<a class="lfg-header__login" href="#"><img src="/img/icons/man-user.png" alt="profile icon" />Log In/Register</a>
+		<button class="lfg-header__login"><img src="/img/icons/man-user.png" alt="profile icon" />Log In/Register</button>
 	</div>
 </div>
 
