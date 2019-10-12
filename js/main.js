@@ -1,4 +1,6 @@
 $(document).ready( function(){
+  console.log('helloooo');
+  
   // Get the modal
   var $modal = document.getElementById("loginModal");
 
