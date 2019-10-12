@@ -20,7 +20,7 @@
       <div class="lfg-main-content__inner three-quarter-container">
         <div class="lfg-cards__container">
 
-          <form action="phpincludes/create_user.php" method="post">
+          <form action="phpincludes/create_user.php" method="POST">
             <div>Create your first user</div>
             <label for="username">Username</label>
             <input type="text" name="username" required />
