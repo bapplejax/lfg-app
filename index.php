@@ -28,8 +28,6 @@
       </div>
     </div>
 
-    <div class="lfg-footer">
-      <?php require_once('phpincludes/footer.php'); ?>
-    </div>
+    <?php require_once('phpincludes/footer.php'); ?>
 	</body>
 </html>
