@@ -10,19 +10,19 @@ $(document).ready( function(){
   var $close = $(document).find(".close")[0];
 
   // When the user clicks on the button, open the modal
-  $btn.on('click', function() {
+  $btn.click(function() {
     $modal.addClass('modal-show');
     console.log('clicked on button')
   });
 
   // When the user clicks on <span> (x), close the modal
-  $close.on('click', function() {
+  $close.click(function() {
     $modal.removeClass('modal-show');
     console.log('clicked on close');
   });
 
   // When the user clicks anywhere outside of the modal, close it
-  $(window).on('click', function(event) {
+  $(window).click(function(event) {
     if (event.target == $modal) {
       $modal.removeClass('modal-show');
       console.log('click on window');
