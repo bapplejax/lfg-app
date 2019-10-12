@@ -15,10 +15,12 @@ $(document).ready( function(){
   // When the user clicks on the button, open the modal
   $btn.click(function() {
     $modal.addClass('modal-show');
+    console.log($btn + " " + $modal);
   });
 
   // When the user clicks on <span> (x), close the modal
   $close.click(function() {
+    console.log($close);
     $modal.removeClass('modal-show');
   });
 
