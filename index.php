@@ -19,18 +19,6 @@
     <div class="lfg-main-content__container">
       <div class="lfg-main-content__inner three-quarter-container">
         <div class="lfg-cards__container">
-
-          <form action="phpincludes/create_user.php" method="POST">
-            <div>Create your first user</div>
-            <label for="username">Username</label>
-            <input type="text" name="username" required />
-            <label for="password">Password</label>
-            <input type="password" name="password" required />
-            <input type="submit">
-          </form>
-
-          <hr />
-
           <?php require_once('phpincludes/lfg-cards.php'); ?>
         </div>
 

@@ -22,3 +22,19 @@
 <div class="lfg-header__bottom">
 	<?php include_once('navigation.php'); ?>
 </div>
+
+<div id="loginModal" class="modal">
+  <div class="modal__wrapper">
+    <!--  close button -->
+    <span class="close">&times;</span>
+
+    <form class="login-form" action="../phpincludes/create_user.php" method="POST">
+      <div>Create your first user</div>
+      <label for="username">Username</label>
+      <input type="text" name="username" required />
+      <label for="password">Password</label>
+      <input type="password" name="password" required />
+      <input type="submit">
+    </form>
+  </div>
+</div>
