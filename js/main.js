@@ -6,7 +6,7 @@ $(document).ready( function(){
 
   // Get the button that opens the modal
   var $btn = $(".lfg-header__login");
-  consol.log($btn);
+  console.log($btn);
 
   // Get the <span> element that closes the modal
   var $close = $(".close")[0];
