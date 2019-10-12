@@ -1,9 +1,9 @@
 $(document).ready( function(){
   // Get the modal
-  var $modal = $("#loginModal");
+  var $modal = document.getElementById("loginModal");
 
 // Get the button that opens the modal
-  var $btn = $(".lfg-header__login");
+  var $btn = document.getElementsByClassName("lfg-header__login");
 
 // Get the <span> element that closes the modal
   var $close = document.getElementsByClassName("close")[0];
