@@ -1,5 +1,7 @@
 $(document).ready( function(){
-  console.log('helloooo');
+
+  const $myModal = $(document).find("#loginModal");
+  console.log($myModal);
 
   // Get the modal
   var modal = document.getElementById("loginModal");
