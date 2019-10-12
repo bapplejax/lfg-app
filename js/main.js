@@ -9,9 +9,6 @@ $(document).ready( function(){
   // Get the <span> element that closes the modal
   const close = $(".close");
 
-  // Get the wrapper element
-  const modalWindow = $(".modal__wrapper");
-
   // When the user clicks on the button, open the modal
   btn.click(function() {
     modal.addClass('modal-show');
@@ -23,7 +20,7 @@ $(document).ready( function(){
   });
 
   // When the user clicks anywhere outside of the modal, close it
-  modalWindow.click(function(event) {
+  modal.click(function(event) {
     if (event.target == modal) {
       modal.removeClass('modal-show');
     }
