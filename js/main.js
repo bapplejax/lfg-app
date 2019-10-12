@@ -20,7 +20,7 @@ $(document).ready( function(){
   });
 
   // When the user clicks anywhere outside of the modal, close it
-  modal.click(function() {
+  $(document).not('.modal__wrapper').click(function() {
     modal.removeClass('modal-show');
   });
 });
