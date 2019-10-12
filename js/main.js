@@ -1,13 +1,13 @@
 // Get the modal
-var $modal = $document.getElementById("loginModal");
+var $modal = document.getElementById("loginModal");
 console.log($modal);
 
 // Get the button that opens the modal
-var $btn = $document.find(".lfg-header__login");
+var $btn = document.getElementsByClassName("lfg-header__login");
 console.log($btn);
 
 // Get the <span> element that closes the modal
-var $close = $document.find(".close")[0];
+var $close = document.getElementsByClassName("close")[0];
 console.log($close);
 
 // When the user clicks on the button, open the modal
@@ -21,7 +21,7 @@ $close.onclick = function() {
 };
 
 // When the user clicks anywhere outside of the modal, close it
-$window.onclick = function(event) {
+window.onclick = function(event) {
   if (event.target == $modal) {
     $modal.style.display = "none";
   }
