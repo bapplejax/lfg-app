@@ -16,14 +16,11 @@ session_start();
 
 	<div class="lfg-header__right">
 		<a href="#"><img class="lfg-header__twitter" src="/img/icons/twitter.png" alt="twitter icon" /></a>
-		<!-- @TODO have an if statement for login status to change out icons/words -->
-    <form class="logout-form" action="../phpincludes/logout_handler.php" method="POST"><button type="submit">Logout</button></form>
-    <button class="lfg-header__login"><img src="/img/icons/man-user.png" alt="profile icon" />Log In/Register</button>
     <?php
       if (isset($_SESSION['logged_in'])) {
-        echo '<h1>Logged in</h1>';
+        echo '<form class="logout-form" action="../phpincludes/logout_handler.php" method="POST"><button type="submit">Logout</button></form>';
       } else {
-        echo '<h1>Logged Out</h1>';
+        echo '<button class="lfg-header__login"><img src="/img/icons/man-user.png" alt="profile icon" />Log In/Register</button>';
       }
     ?>
 	</div>
