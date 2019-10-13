@@ -1,4 +1,6 @@
-<?php ?>
+<?php
+session_start();
+?>
 <div class="lfg-header__top">
     <div class="lfg-header__left">
     <img class="lfg-header__logo" src="https://www.fillmurray.com/200/75" />
@@ -23,13 +25,19 @@
 	<?php include_once('navigation.php'); ?>
 </div>
 
+<?php
+if (isset($_SESSION['message'])) {
+  echo "<div class='message'>{$_SESSION['message']}</div>";
+}
+?>
+
 <div id="loginModal" class="modal">
   <div class="modal__wrapper">
     <!--  close button -->
     <span class="close">&times;</span>
 
-    <form class="login-form" action="../phpincludes/create_user.php" method="POST">
-      <div>Create your first user</div>
+    <form class="login-form" action="../phpincludes/login_handler.php" method="POST">
+      <div>Login</div>
       <label for="username">Username</label>
       <input type="text" name="username" required />
       <label for="password">Password</label>
