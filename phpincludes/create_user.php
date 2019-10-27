@@ -6,6 +6,7 @@ $errors = array();
 
 $username = $_POST['username'];
 $password = $_POST['password'];
+$region = $_POST['region'];
 
 if (is_numeric($username)) {
   $errors[] = "Must be alphanumeric.";
@@ -29,6 +30,6 @@ unset($_SESSION['errors']);
 
 require_once '../phpclasses/Dao.php';
 $dao = new Dao();
-$dao->createUser($_POST['username'], $_POST['password']);
+$dao->createUser($_POST['username'], $_POST['password'], $_POST['region']);
 header("Location: https://thawing-savannah-68398.herokuapp.com/");
 ?>

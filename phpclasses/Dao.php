@@ -17,23 +17,18 @@
       return $connection;
     }
 
-    public function createUser($username, $password) {
+    public function createUser($username, $password, $region) {
       $conn = $this->getConnection();
+      $date = date('Y-m-d H:i:s');
 
-      $createQuery = "insert into user (username,password) values (:username, :password)";
+      $createQuery = "insert into user (username,password,created_on,region) values (:username, :password, :created_on, :region)";
 
       $q = $conn->prepare($createQuery);
       $q->bindParam(":username", $username);
       $q->bindParam(":password", $password);
+      $q->bindParam(":created_on", $date);
+      $q->bindParam(":region", $region);
       $q->execute();
-
-
-//      try {
-//        return $conn->query("INSERT INTO user(username,password) VALUES ($username,$password)", PDO::FETCH_ASSOC);
-//      } catch(Exception $e) {
-//        echo print_r($e,1);
-//        exit;
-//      }
     }
   }
 //
