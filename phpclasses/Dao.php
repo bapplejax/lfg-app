@@ -19,16 +19,21 @@
 
     public function createUser($username, $password) {
       $conn = $this->getConnection();
-  //    $saveUser = "INSERT INTO heroku_92a29c852238ab6_user(username,password) VALUES ($username,$password)";
-  //    $q = $conn->prepare($saveUser);
-  //    $q->bindParam("$username,$password", $username,$password);
-  //    $q->execute();
-      try {
-        return $conn->query("INSERT INTO user(username,password) VALUES ($username,$password)", PDO::FETCH_ASSOC);
-      } catch(Exception $e) {
-        echo print_r($e,1);
-        exit;
-      }
+
+      $createQuery = "insert into user (username,password) values (:username, :password)";
+
+      $q = $conn->prepare($createQuery);
+      $q->bindParam(":username", $username);
+      $q->bindParam(":password", $password);
+      $q->execute();
+
+
+//      try {
+//        return $conn->query("INSERT INTO user(username,password) VALUES ($username,$password)", PDO::FETCH_ASSOC);
+//      } catch(Exception $e) {
+//        echo print_r($e,1);
+//        exit;
+//      }
     }
   }
 //
