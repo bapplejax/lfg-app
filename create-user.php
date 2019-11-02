@@ -19,10 +19,12 @@ session_start();
   <div class="lfg-main-content__inner">
     <form class="create-form" action="/phpincludes/create_user.php" method="POST">
       <div>Login</div>
-      <label for="username">Username</label>
+      <label for="username">Username*</label>
       <input type="text" name="username" required />
-      <label for="password">Password</label>
+      <label for="password">Password*</label>
       <input type="password" name="password" required />
+      <label>Email Address*</label>
+      <input type="email" name="email" required />
       <label>Region</label>
       <div class="create-form__region">
         <label for="NA">North America</label>
@@ -34,6 +36,15 @@ session_start();
       </div>
       <input type="submit">
     </form>
+
+    <?php
+    if (isset($_SESSION['messages'])) {
+      foreach ($_SESSION['messages'] as $message) {
+        echo "<div class='message {$_SESSION['status']}'>{$message}</div>";
+      }
+    }
+    ?>
+
   </div>
 </div>
 
