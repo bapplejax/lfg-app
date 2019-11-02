@@ -40,6 +40,8 @@
       $q->bindParam(':username', $username);
       $q->execute();
 
+      $messages[] = "it got here";
+
       if($q->rowCount() > 0){
         $messages[] = "Sorry... username already taken";
       }else{
