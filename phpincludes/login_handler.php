@@ -31,24 +31,21 @@ $user = $q->fetch(PDO::FETCH_ASSOC);
 //If $row is FALSE.
 if($user === false){
   //Could not find a user with that username!
-  //PS: You might want to handle this error in a more user-friendly manner!
-  die('Incorrect username / password combination!');
+  $_SESSION['message'] = "No such username found.";
+  header("Location: https://thawing-savannah-68398.herokuapp.com/");
+  exit;
 } else{
-  //User account found. Check to see if the given password matches the
-  //password hash that we stored in our users table.
-
-  //Compare the passwords.
-  $validPassword = password_verify($password, $user['password']);
+  //User account found. Check to see if the given password matches
 
   //If $validPassword is TRUE, the login has been successful.
-  if($validPassword){
+  if($password == $user['password']){
 
     $_SESSION['logged_in'] = true;
     header("Location: https://thawing-savannah-68398.herokuapp.com/premium.php");
     exit;
 
   } else{
-    $_SESSION['message'] = "Invalid username or password";
+    $_SESSION['message'] = "Invalid password";
     header("Location: https://thawing-savannah-68398.herokuapp.com/");
     exit;
   }
