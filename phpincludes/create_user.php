@@ -33,7 +33,7 @@ if (empty($_POST['email'])) {
   $messages[] = "Please enter an email";
 }
 
-//$dao->checkUsername($username);
+$dao->checkUsername($_POST['username']);
 
 if (count($messages) > 0) {
   $_SESSION['messages'] = $messages;
