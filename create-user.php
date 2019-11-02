@@ -25,9 +25,12 @@ session_start();
       <input type="password" name="password" required />
       <label>Region</label>
       <div class="create-form__region">
-        <input type="radio" name="region" value="NA"><p>North America</p>
-        <input type="radio" name="region" value="EU"><p>Europe</p>
-        <input type="radio" name="region" value="Other"><p>Other</p>
+        <label for="NA">North America</label>
+        <input type="radio" name="region" value="NA" />
+        <label for="EU">Europe</label>
+        <input type="radio" name="region" value="EU">
+        <label for="Other">Other</label>
+        <input type="radio" name="region" value="Other">
       </div>
       <input type="submit">
     </form>
