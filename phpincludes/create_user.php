@@ -16,7 +16,6 @@ $region = $_POST['region'];
 // Username validation
 if (is_numeric($username)) {
   $messages[] = "Must be alphanumeric.";
-  unset($presets['username']);
 }
 
 // Email validation
@@ -41,7 +40,6 @@ $dao->checkUsername($_POST['username']);
 
 if (count($messages) > 0) {
   $_SESSION['messages'] = $messages;
-  $_SESSION['form_data'] = $presets;
   $_SESSION['status'] = 'fail';
   header("Location: https://thawing-savannah-68398.herokuapp.com/create-user.php");
   exit;
