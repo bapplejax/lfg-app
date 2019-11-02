@@ -20,11 +20,11 @@ session_start();
     <form class="create-form" action="/phpincludes/create_user.php" method="POST">
       <div>Login</div>
       <label for="username">Username*</label>
-      <input type="text" name="username" required />
+      <input type="text" name="username" />
       <label for="password">Password*</label>
-      <input type="password" name="password" required />
+      <input type="password" name="password" />
       <label>Email Address*</label>
-      <input type="email" name="email" required />
+      <input type="email" name="email" />
       <label>Region</label>
       <div class="create-form__region">
         <label for="NA">North America</label>

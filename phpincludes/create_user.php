@@ -1,9 +1,6 @@
 <?php
 session_start();
 
-require_once '../phpclasses/Dao.php';
-$dao = new Dao();
-
 $messages = array();
 $presets = $_POST;
 $sentiment = '';
@@ -36,8 +33,6 @@ if (empty($_POST['email'])) {
   $messages[] = "Please enter an email";
 }
 
-$dao->checkUsername($_POST['username']);
-
 if (count($messages) > 0) {
   $_SESSION['messages'] = $messages;
   $_SESSION['status'] = 'fail';
@@ -47,6 +42,8 @@ if (count($messages) > 0) {
 
 unset($_SESSION['messages']);
 
+require_once '../phpclasses/Dao.php';
+$dao = new Dao();
 $dao->createUser($_POST['username'], $_POST['password'], $_POST['region'], $_POST['email']);
 $_SESSION['logged_in'] = true;
 $_SESSION['messages'] = array("Your profile has been created!");
