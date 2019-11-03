@@ -4,8 +4,6 @@ session_start();
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-$valid = false;
-
 require_once '../vendor/autoload.php';
 
 // Get the Dao class
@@ -28,12 +26,12 @@ $q->execute();
 //Fetch row.
 $user = $q->fetch(PDO::FETCH_ASSOC);
 
-$_SESSION['message'] = 'user ' . $user . ' password for user ' . $user['password'];
+//$_SESSION['message'] = 'user ' . $user . ' password for user ' . $user['password'];
 
 //If $row is FALSE.
 if($user === false){
   //Could not find a user with that username!
-//  $_SESSION['message'] = "No such username found.";
+  $_SESSION['message'] = "No such username found.";
   header("Location: https://thawing-savannah-68398.herokuapp.com/");
   exit;
 } else{
@@ -47,7 +45,7 @@ if($user === false){
     exit;
 
   } else{
-//    $_SESSION['message'] = "Invalid password";
+    $_SESSION['message'] = "Invalid password";
     header("Location: https://thawing-savannah-68398.herokuapp.com/");
     exit;
   }
