@@ -22,7 +22,7 @@
     public function createUser($username, $password, $region, $email) {
       $conn = $this->getConnection();
       $date = date('Y-m-d H:i:s');
-      
+
       $checkQuery = "SELECT username FROM user WHERE username = :username";
       $c = $conn->prepare($checkQuery);
       $c->bindParam(':username', $username);
