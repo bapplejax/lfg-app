@@ -12,7 +12,7 @@ session_start();
 </div>
 
 <div class="lfg-banner__container">
-  <?php require_once('phpincludes/banner-contact.php'); ?>
+  <?php require_once('phpincludes/banner-create.php'); ?>
 </div>
 
 <div class="lfg-main-content__container lfg-content--create-user">
