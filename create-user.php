@@ -17,6 +17,15 @@ session_start();
 
 <div class="lfg-main-content__container lfg-content--create-user">
   <div class="lfg-main-content__inner">
+
+    <?php
+    if (isset($_SESSION['messages'])) {
+      foreach ($_SESSION['messages'] as $message) {
+        echo "<div class='message {$_SESSION['status']}'>{$message}</div>";
+      }
+    }
+    ?>
+
     <form class="create-form" action="/phpincludes/create_user.php" method="POST">
       <h2>Create your profile!</h2>
 
@@ -59,15 +68,6 @@ session_start();
         <input class="button button--primary" type="submit">
       </div>
     </form>
-
-    <?php
-    if (isset($_SESSION['messages'])) {
-      foreach ($_SESSION['messages'] as $message) {
-        echo "<div class='message {$_SESSION['status']}'>{$message}</div>";
-      }
-    }
-    ?>
-
   </div>
 </div>
 

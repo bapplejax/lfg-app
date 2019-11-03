@@ -1,4 +1,6 @@
 <?php
+  session_start();
+
   class Dao {
 
     private $host = "us-cdbr-iron-east-05.cleardb.net";
@@ -21,32 +23,26 @@
       $conn = $this->getConnection();
       $date = date('Y-m-d H:i:s');
 
-      $createQuery = "insert into user (username,password,created_on,region,email) values (:username, :password, :created_on, :region, :email)";
-
-      $q = $conn->prepare($createQuery);
-      $q->bindParam(":username", $username);
-      $q->bindParam(":password", $password);
-      $q->bindParam(":created_on", $date);
-      $q->bindParam(":region", $region);
-      $q->bindParam(":email", $email);
-      $q->execute();
-    }
-
-    public function checkUsername($username) {
-      $conn = $this->getConnection();
 
       $checkQuery = "SELECT username FROM user WHERE username = :username";
-      $q = $conn->prepare($checkQuery);
-      $q->bindParam(':username', $username);
-      $q->execute();
+      $c = $conn->prepare($checkQuery);
+      $c->bindParam(':username', $username);
+      $c->execute();
 
-      $messages[] = "it got here";
+      if($c->rowCount() > 0){
+        $messages[] = "Username already exists";
+      } else {
+        //Securly insert into database
+        $createQuery = "insert into user (username,password,created_on,region,email) values (:username, :password, :created_on, :region, :email)";
 
-      if($q->rowCount() > 0){
-        $messages[] = "Sorry... username already taken";
-      }else{
-        exit();
-      }
+        $q = $conn->prepare($createQuery);
+        $q->bindParam(":username", $username);
+        $q->bindParam(":password", $password);
+        $q->bindParam(":created_on", $date);
+        $q->bindParam(":region", $region);
+        $q->bindParam(":email", $email);
+        $q->execute();
+      };
     }
   }
 //

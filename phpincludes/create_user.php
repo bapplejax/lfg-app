@@ -12,7 +12,7 @@ $region = $_POST['region'];
 
 // Username validation
 if (is_numeric($username)) {
-  $messages[] = "Must be alphanumeric.";
+  $messages[] = "Username must be alphanumeric.";
 }
 
 // Email validation
@@ -30,7 +30,7 @@ if (empty($_POST['password'])) {
 }
 
 if (empty($_POST['email'])) {
-  $messages[] = "Please enter an email";
+  $messages[] = "Please enter an email address";
 }
 
 if (count($messages) > 0) {
@@ -44,7 +44,6 @@ unset($_SESSION['messages']);
 
 require_once '../phpclasses/Dao.php';
 $dao = new Dao();
-$dao->checkUsername($_POST['username']);
 $dao->createUser($_POST['username'], $_POST['password'], $_POST['region'], $_POST['email']);
 
 $_SESSION['logged_in'] = true;

@@ -13,6 +13,15 @@
 		</div>
 
 		<div class="lfg-banner__container">
+
+      <?php
+      if (isset($_SESSION['messages'])) {
+        foreach ($_SESSION['messages'] as $message) {
+          echo "<div class='message {$_SESSION['status']}'>{$message}</div>";
+        }
+      }
+      ?>
+
 			<?php require_once('phpincludes/banner.php'); ?>
 	  </div>
 

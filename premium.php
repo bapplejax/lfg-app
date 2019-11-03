@@ -7,7 +7,7 @@
 
   <?php require_once('phpincludes/head.php'); ?>
 
-  <body id="<?php echo $thisPage; ?>">
+  <body id="<?php echo $thisPage; ?>">a
     <div class="lfg-header">
       <?php require_once('phpincludes/header.php'); ?>
     </div>
@@ -15,6 +15,14 @@
     <div class="lfg-banner__container">
       <?php require_once('phpincludes/banner-premium.php'); ?>
     </div>
+
+  <?php
+  if (isset($_SESSION['messages'])) {
+    foreach ($_SESSION['messages'] as $message) {
+      echo "<div class='message {$_SESSION['status']}'>{$message}</div>";
+    }
+  }
+  ?>
 
     <div class="lfg-main-content__container lfg-content--contact">
       <div class="lfg-main-content__inner">
