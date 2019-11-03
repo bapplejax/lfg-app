@@ -35,15 +35,23 @@ session_start();
         <input type="email" name="email" />
       </div>
 
-      <div class="create-form__line">
+      <div class="create-form__line create-form__line--radio">
         <label>Region</label>
         <div class="create-form__region">
-          <input type="radio" name="region" value="NA" />
-          <label for="NA">North America</label>
-          <input type="radio" name="region" value="EU">
-          <label for="EU">Europe</label>
-          <input type="radio" name="region" value="Other">
-          <label for="Other">Other</label>
+          <div>
+            <input type="radio" name="region" id="NA" value="NA" />
+            <label for="NA">North America</label>
+          </div>
+
+          <div>
+            <input type="radio" name="region" id="EU" value="EU">
+            <label for="EU">Europe</label>
+          </div>
+
+          <div>
+            <input type="radio" name="region" id="Other" value="Other">
+            <label for="Other">Other</label>
+          </div>
         </div>
       </div>
 
