@@ -44,14 +44,11 @@ unset($_SESSION['messages']);
 
 require_once '../phpclasses/Dao.php';
 $dao = new Dao();
+$dao->checkUsername($_POST['username']);
 $dao->createUser($_POST['username'], $_POST['password'], $_POST['region'], $_POST['email']);
-
-$messages = array();
 
 $_SESSION['logged_in'] = true;
 $_SESSION['messages'] = array("Your profile has been created!");
 $_SESSION['status'] = 'success';
 header("Location: https://thawing-savannah-68398.herokuapp.com/");
-
-unset($_SESSION['messages']);
 ?>
