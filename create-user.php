@@ -15,26 +15,41 @@ session_start();
   <?php require_once('phpincludes/banner-contact.php'); ?>
 </div>
 
-<div class="lfg-main-content__container lfg-content--contact">
+<div class="lfg-main-content__container lfg-content--create-user">
   <div class="lfg-main-content__inner">
     <form class="create-form" action="/phpincludes/create_user.php" method="POST">
-      <div>Login</div>
-      <label for="username">Username*</label>
-      <input type="text" name="username" />
-      <label for="password">Password*</label>
-      <input type="password" name="password" />
-      <label>Email Address*</label>
-      <input type="email" name="email" />
-      <label>Region</label>
-      <div class="create-form__region">
-        <label for="NA">North America</label>
-        <input type="radio" name="region" value="NA" />
-        <label for="EU">Europe</label>
-        <input type="radio" name="region" value="EU">
-        <label for="Other">Other</label>
-        <input type="radio" name="region" value="Other">
+      <h2>Create your profile!</h2>
+
+      <div class="create-form__line">
+        <label for="username">Username*</label>
+        <input type="text" name="username" />
       </div>
-      <input type="submit">
+
+      <div class="create-form__line">
+        <label for="password">Password*</label>
+        <input type="password" name="password" />
+      </div>
+
+      <div class="create-form__line">
+        <label>Email Address*</label>
+        <input type="email" name="email" />
+      </div>
+
+      <div class="create-form__line">
+        <label>Region</label>
+        <div class="create-form__region">
+          <label for="NA">North America</label>
+          <input type="radio" name="region" value="NA" />
+          <label for="EU">Europe</label>
+          <input type="radio" name="region" value="EU">
+          <label for="Other">Other</label>
+          <input type="radio" name="region" value="Other">
+        </div>
+      </div>
+
+      <div class="create-form__line">
+        <input class="button button--primary" type="submit">
+      </div>
     </form>
 
     <?php
