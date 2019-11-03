@@ -30,7 +30,8 @@
       $c->execute();
 
       if($c->rowCount() > 0){
-        $messages[] = "Username already exists";
+        $_SESSION['messages'] = array("Username already exists");
+        exit();
       } else {
         //Securly insert into database
         $createQuery = "insert into user (username,password,created_on,region,email) values (:username, :password, :created_on, :region, :email)";

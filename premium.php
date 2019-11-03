@@ -7,7 +7,7 @@
 
   <?php require_once('phpincludes/head.php'); ?>
 
-  <body id="<?php echo $thisPage; ?>">a
+  <body id="<?php echo $thisPage; ?>">
     <div class="lfg-header">
       <?php require_once('phpincludes/header.php'); ?>
     </div>
