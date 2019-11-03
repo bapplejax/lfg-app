@@ -28,6 +28,8 @@ $q->execute();
 //Fetch row.
 $user = $q->fetch(PDO::FETCH_ASSOC);
 
+echo 'user ' . $user . ' password for user ' . $user['password'];
+
 //If $row is FALSE.
 if($user === false){
   //Could not find a user with that username!
