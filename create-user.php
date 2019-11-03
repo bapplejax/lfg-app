@@ -38,12 +38,12 @@ session_start();
       <div class="create-form__line">
         <label>Region</label>
         <div class="create-form__region">
-          <label for="NA">North America</label>
           <input type="radio" name="region" value="NA" />
-          <label for="EU">Europe</label>
+          <label for="NA">North America</label>
           <input type="radio" name="region" value="EU">
-          <label for="Other">Other</label>
+          <label for="EU">Europe</label>
           <input type="radio" name="region" value="Other">
+          <label for="Other">Other</label>
         </div>
       </div>
 
