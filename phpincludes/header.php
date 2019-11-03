@@ -45,7 +45,7 @@ if (isset($_SESSION['message'])) {
           <span class="close">&times;</span>
           
             <form class="login-form" action="../phpincludes/login_handler.php" method="POST">
-              <h2>Login</h2>
+              <h3>Login</h3>
               <label for="username">Username</label>
               <input type="text" name="username" required />
               <label for="password">Password</label>
