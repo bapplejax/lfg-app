@@ -22,8 +22,7 @@
     public function createUser($username, $password, $region, $email) {
       $conn = $this->getConnection();
       $date = date('Y-m-d H:i:s');
-
-
+      
       $checkQuery = "SELECT username FROM user WHERE username = :username";
       $c = $conn->prepare($checkQuery);
       $c->bindParam(':username', $username);
@@ -31,6 +30,8 @@
 
       if($c->rowCount() > 0){
         $_SESSION['messages'] = array("Username already exists");
+        $_SESSION['status'] = 'fail';
+        header("Location: https://thawing-savannah-68398.herokuapp.com/create-user.php");
         exit();
       } else {
         //Securly insert into database
