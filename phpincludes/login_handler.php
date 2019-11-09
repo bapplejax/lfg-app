@@ -41,19 +41,17 @@ if($user === false){
     $_SESSION['logged_in'] = true;
     $_SESSION['status'] = 'success';
     $_SESSION['message'] = "Login successful!";
-
     $_SESSION['username'] = $username;
 
-    unset($_SESSION['messages']);
-
-    header("Location: https://thawing-savannah-68398.herokuapp.com/premium.php");
+    unset($_SESSION['message']);
+    header("Location: https://thawing-savannah-68398.herokuapp.com/profile.php");
     exit;
 
   } else{
     $_SESSION['message'] = "Invalid password";
     $_SESSION['status'] = 'fail';
 
-    unset($_SESSION['messages']);
+    unset($_SESSION['message']);
 
     header("Location: https://thawing-savannah-68398.herokuapp.com/");
     exit;
