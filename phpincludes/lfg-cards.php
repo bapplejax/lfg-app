@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once('../phpincludes/api_handler.php');
-$make_call = callAPI('GET', 'https://api.rawg.io/api/games', false);
+$make_call = callAPI('GET', 'https://api-v3.igdb.com/games/', false);
 ?>
 
 <div>
