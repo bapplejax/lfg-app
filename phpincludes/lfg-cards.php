@@ -5,7 +5,9 @@ $make_call = callAPI('GET', 'https://api-v3.igdb.com/games/', false);
 ?>
 
 <div>
-<?php echo $make_call; ?>
+<?php
+  var_dump(json_decode($make_call, true));
+?>
 </div>
 
 <div class="lfg-cards__form-wrapper">
