@@ -46,9 +46,6 @@ require_once '../phpclasses/Dao.php';
 $dao = new Dao();
 $dao->createUser($_POST['username'], $_POST['password'], $_POST['region'], $_POST['email']);
 
-// Storing username to use later
-$_SESSION['username'] = $_POST['username'];
-
 $_SESSION['logged_in'] = true;
 $_SESSION['messages'] = array("Your profile has been created! Welcome, " . $username . "!");
 $_SESSION['status'] = 'success';

@@ -26,8 +26,6 @@ $q->execute();
 //Fetch row.
 $user = $q->fetch(PDO::FETCH_ASSOC);
 
-//$_SESSION['message'] = 'user ' . $user . ' password for user ' . $user['password'];
-
 //If $row is FALSE.
 if($user === false){
   //Could not find a user with that username!
@@ -42,6 +40,10 @@ if($user === false){
   if($password == $user['password']){
     $_SESSION['logged_in'] = true;
     $_SESSION['status'] = 'success';
+    $_SESSION['username'] = $username;
+
+    unset($_SESSION['messages']);
+
     header("Location: https://thawing-savannah-68398.herokuapp.com/premium.php");
     exit;
 
