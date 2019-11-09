@@ -32,7 +32,7 @@ session_start();
 
 <?php
 if (isset($_SESSION['message'])) {
-  echo "<div class='message" . $_SESSION['status'] . "'>{$_SESSION['message']}</div>";
+  echo "<div class='message " . $_SESSION['status'] . "'>{$_SESSION['message']}</div>";
 }
 ?>
 
