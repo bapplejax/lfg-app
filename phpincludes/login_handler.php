@@ -32,7 +32,6 @@ if($user === false){
   $_SESSION['messages'] = "No such username found.";
   $_SESSION['status'] = 'fail';
   header("Location: https://thawing-savannah-68398.herokuapp.com/");
-  unset($_SESSION['messages']);
   exit;
 } else{
   //User account found. Check to see if the given password matches
@@ -45,7 +44,6 @@ if($user === false){
     $_SESSION['username'] = $username;
 
     header("Location: https://thawing-savannah-68398.herokuapp.com/profile.php");
-    unset($_SESSION['messages']);
     exit;
 
   } else{
@@ -53,7 +51,6 @@ if($user === false){
     $_SESSION['status'] = 'fail';
 
     header("Location: https://thawing-savannah-68398.herokuapp.com/");
-    unset($_SESSION['messages']);
     exit;
   }
 }
