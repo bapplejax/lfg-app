@@ -50,6 +50,9 @@ if($user === false){
   } else{
     $_SESSION['message'] = "Invalid password";
     $_SESSION['status'] = 'fail';
+
+    unset($_SESSION['messages']);
+    
     header("Location: https://thawing-savannah-68398.herokuapp.com/");
     exit;
   }
