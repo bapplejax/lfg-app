@@ -1,4 +1,12 @@
-<?php ?>
+<?php
+session_start();
+require_once('../phpincludes/api_handler.php');
+$make_call = callAPI('GET', 'https://api.rawg.io/api/games', false);
+?>
+
+<div>
+<?php echo $make_call; ?>
+</div>
 
 <div class="lfg-cards__form-wrapper">
   <form class="lfg-cards__form">
