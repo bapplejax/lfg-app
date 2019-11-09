@@ -29,9 +29,10 @@ $user = $q->fetch(PDO::FETCH_ASSOC);
 //If $row is FALSE.
 if($user === false){
   //Could not find a user with that username!
-  $_SESSION['messages'] = array("No such username found.");
+  $_SESSION['messages'] = "No such username found.";
   $_SESSION['status'] = 'fail';
   header("Location: https://thawing-savannah-68398.herokuapp.com/");
+  unset($_SESSION['messages']);
   exit;
 } else{
   //User account found. Check to see if the given password matches
@@ -40,17 +41,19 @@ if($user === false){
   if($password == $user['password']){
     $_SESSION['logged_in'] = true;
     $_SESSION['status'] = 'success';
-    $_SESSION['messages'] = array("Login successful!");
+    $_SESSION['messages'] = "Login successful!";
     $_SESSION['username'] = $username;
 
     header("Location: https://thawing-savannah-68398.herokuapp.com/profile.php");
+    unset($_SESSION['messages']);
     exit;
 
   } else{
-    $_SESSION['messages'] = array("Invalid password");
+    $_SESSION['messages'] = "Invalid password";
     $_SESSION['status'] = 'fail';
 
     header("Location: https://thawing-savannah-68398.herokuapp.com/");
+    unset($_SESSION['messages']);
     exit;
   }
 }
