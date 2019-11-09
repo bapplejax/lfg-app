@@ -1,6 +1,8 @@
 <?php
 session_start();
+echo "in lfg-cards before require";
 require_once('../phpincludes/api_handler.php');
+echo "in lfg-cards after require";
 ?>
 
 <div class="lfg-cards__form-wrapper">
