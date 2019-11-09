@@ -1,8 +1,14 @@
 <?php
 session_start();
-echo "in lfg-cards before require";
 require_once('api_handler.php');
-echo "in lfg-cards after require";
+$get_data = callAPI('GET', 'https://api-v3.igdb.com/games/', false);
+$response = json_decode($get_data, true);
+echo "RESPONSE: " . $response . "\n";
+
+$errors = $response['response']['errors'];
+$data = $response['response']['data'][0];
+echo "Errors: " . $errors . "\n";
+echo "Data: " . $data;
 ?>
 
 <div class="lfg-cards__form-wrapper">

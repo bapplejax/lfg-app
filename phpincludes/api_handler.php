@@ -1,10 +1,7 @@
 <?php
-echo "First";
 function callAPI($method, $url, $data){
-  echo "in the call";
   $curl = curl_init();
 
-  echo "before switch";
   switch ($method){
     case "POST":
       curl_setopt($curl, CURLOPT_POST, 1);
@@ -21,7 +18,6 @@ function callAPI($method, $url, $data){
         $url = sprintf("%s?%s", $url, http_build_query($data));
   }
 
-  echo "after switch setting options";
   // OPTIONS:
   curl_setopt($curl, CURLOPT_URL, $url);
   curl_setopt($curl, CURLOPT_HTTPHEADER, array(
@@ -31,21 +27,12 @@ function callAPI($method, $url, $data){
   curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
   curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
 
-  echo "after options, executing curl";
   // EXECUTE:
   $result = curl_exec($curl);
   if(!$result){die("Connection Failure");}
   curl_close($curl);
   return $result;
 }
-echo "after function";
-
-$get_data = callAPI('GET', 'https://api-v3.igdb.com/games/', false);
-$response = json_decode($get_data, true);
-$errors = $response['response']['errors'];
-$data = $response['response']['data'][0];
-echo "Errors: " . $errors;
-echo "Data: " . $data;
 
 
 //
