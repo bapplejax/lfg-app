@@ -1,18 +1,19 @@
 <?php
 session_start();
 require_once('api_handler.php');
-echo "Start"."\n";
-$get_data = callAPI('GET', 'https://api-v3.igdb.com/games/', 'fields name; limit 10;');
+echo "Start"."<br/>";
+$get_data = callAPI('GET', 'https://api-v3.igdb.com/games/', 'fields name; limit 12;');
+echo "<br/>";
 $response = json_decode($get_data, true);
-echo "RESPONSE1: " . print_r($response) . "\n";
-echo "RESPONSE2: " . print_r($response[0]) . "\n";
-echo "RESPONSE3: " . print_r($response[1]) . "\n";
-echo "RESPONSE4: " . print_r($response[0][0]) . "\n";
+echo "RESPONSE1: " . print_r($response) . "<br/>";
+echo "RESPONSE2: " . print_r($response[0]) . "<br/>";
+echo "RESPONSE3: " . print_r($response[1]) . "<br/>";
+echo "RESPONSE4: " . print_r($response[0][0]) . "<br/>";
 
 var_dump($response);
 echo "\n";
 foreach($response as $res)
-  echo $res . '<br/>';
+  echo print_r($res) . '<br/>';
 
 
 $errors = $response['response']['errors'];
