@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once('api_handler.php');
-$get_data = callAPI('GET', 'https://api-v3.igdb.com/games/names/', false);
+$get_data = callAPI('GET', 'https://api-v3.igdb.com/games/', false);
 $response = json_decode($get_data, true);
 echo "RESPONSE: " . print_r($response) . "\n";
 echo "RESPONSE2: " . print_r($response[0]) . "\n";
