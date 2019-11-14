@@ -9,6 +9,11 @@ echo "RESPONSE2: " . print_r($response[0]) . "\n";
 echo "RESPONSE3: " . print_r($response[1]) . "\n";
 echo "RESPONSE4: " . print_r($response[0][0]) . "\n";
 
+var_dump($response);
+echo "\n";
+foreach($response as $res)
+  echo $res . '<br/>';
+
 
 $errors = $response['response']['errors'];
 $data = $response['response']['data'][0];
