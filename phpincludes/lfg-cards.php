@@ -3,7 +3,7 @@ session_start();
 require_once('api_handler.php');
 $get_data = callAPI('GET', 'https://api-v3.igdb.com/games/', false);
 $response = json_decode($get_data, true);
-echo "RESPONSE: " . $response . "\n";
+echo "RESPONSE: " . print_r($response) . "\n";
 
 $errors = $response['response']['errors'];
 $data = $response['response']['data'][0];
