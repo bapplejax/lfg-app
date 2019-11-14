@@ -2,7 +2,7 @@
 session_start();
 require_once('api_handler.php');
 echo "Start"."\n";
-$get_data = callAPI('GET', 'https://api-v3.igdb.com/games/', 'fields name;');
+$get_data = callAPI('GET', 'https://api-v3.igdb.com/games/', 'fields name,cover,rating,platforms;');
 $response = json_decode($get_data, true);
 echo "RESPONSE1: " . print_r($response) . "\n";
 echo "RESPONSE2: " . print_r($response[0]) . "\n";
