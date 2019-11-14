@@ -2,13 +2,12 @@
 session_start();
 require_once('api_handler.php');
 echo "Start"."<br/>";
-$get_data = callAPI('GET', 'https://api-v3.igdb.com/games/', 'fields name; limit 12;');
-echo "<br/>";
-$response = json_decode($get_data, true);
+$get_data = callAPI('GET', 'https://api-v3.igdb.com/games/', false);
+$response = json_decode($get_data);
 echo "RESPONSE1: " . print_r($response) . "<br/>";
 echo "RESPONSE2: " . print_r($response[0]) . "<br/>";
 echo "RESPONSE3: " . print_r($response[1]) . "<br/>";
-echo "RESPONSE4: " . print_r($response[0][0]) . "<br/>";
+echo "RESPONSE4: " . print_r($response["id"][0]) . "<br/>";
 
 var_dump($response);
 echo "\n";
