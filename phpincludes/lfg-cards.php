@@ -4,10 +4,16 @@ require_once('api_handler.php');
 echo "Start"."<br/>";
 $get_data = callAPI('POST', 'https://api-v3.igdb.com/games/', false);
 $response = json_decode($get_data, true);
-echo "RESPONSE1: ";
+
+echo "Entire Response: ";
+echo "<br />";
+print_r($response);
+echo "<br />";
+
+echo "Game Names: ";
 echo "<br />";
 foreach ($response as $res) {
-  echo $res['name'] . '<br>';
+  echo'Name: '. $res[0]['name'] . '<br>';
 }
 echo "<br />";
 
