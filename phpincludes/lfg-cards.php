@@ -2,7 +2,7 @@
 session_start();
 require_once('api_handler.php');
 echo "Start"."<br/>";
-$get_data = callAPI('POST', 'https://api-v3.igdb.com/games/', 'fields name,aggregated_rating,platforms,popularity; sort aggregated_rating desc; limit 20;');
+$get_data = callAPI('POST', 'https://api-v3.igdb.com/games/', 'fields name,rating,platforms,popularity; sort rating desc; limit 20;');
 $response = json_decode($get_data, true);
 echo "Entire Response: ";
 echo "<br />";
@@ -14,7 +14,7 @@ echo "<br />";
 foreach ($response as $res) {
   echo 'Name: ' . $res['name'] . '<br>';
   echo 'Popularity: ' . $res['popularity'] . '<br>';
-  echo 'Rating: ' . $res['aggregated_rating'] . '<br>';
+  echo 'Rating: ' . $res['rating'] . '<br>';
   echo 'Platforms: ' . $res['platforms'][0] . '<br>';
 }
 
