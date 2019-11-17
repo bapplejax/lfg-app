@@ -2,7 +2,7 @@
 session_start();
 require_once('api_handler.php');
 echo "Start"."<br/>";
-$get_data = callAPI('POST', 'https://api-v3.igdb.com/games/', 'fields name,total_rating,platforms; sort name desc; limit 20;');
+$get_data = callAPI('POST', 'https://api-v3.igdb.com/games/', 'fields name,total_rating,platforms; where total_rating > 0; sort total_rating desc; limit 20;');
 $response = json_decode($get_data, true);
 echo "Entire Response: ";
 echo "<br />";
