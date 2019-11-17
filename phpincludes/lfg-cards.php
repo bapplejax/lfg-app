@@ -2,7 +2,7 @@
 session_start();
 require_once('api_handler.php');
 echo "Start"."<br/>";
-$get_data = callAPI('GET', 'https://api-v3.igdb.com/games/', false);
+$get_data = callAPI('GET', 'https://api-v3.igdb.com/', false);
 $response = json_decode($get_data, true);
 echo "RESPONSE1: ";
 echo "<br />";
@@ -10,18 +10,18 @@ print_r($response);
 echo "<br />";
 echo "RESPONSE2: ";
 echo "<br />";
-print_r($response[0]['name']);
+print_r($response[0]['games']['id']);
 echo "<br />";
 echo "RESPONSE3: ";
 echo "<br />";
 foreach ($response as $res) {
-  echo $res['name'] . '<br>';
+  echo $res['games'] . '<br>';
 }
 echo "<br />";
 echo "RESPONSE4: ";
 echo "<br />";
 foreach ($response as $res) {
-  echo $res[0]['name'] . '<br>';
+  echo $res[0]['games'] . '<br>';
 }
 echo "<br />";
 
