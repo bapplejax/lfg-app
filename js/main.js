@@ -25,4 +25,11 @@ $(document).ready( function(){
       modal.removeClass('modal-show');
     });
   }
+
+  // Successful login disappear after 5 seconds
+  var fade_out = function() {
+    $(".success").fadeOut().empty();
+  };
+  setTimeout(fade_out, 5000);
+
 });
