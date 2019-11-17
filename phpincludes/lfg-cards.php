@@ -2,7 +2,7 @@
 session_start();
 require_once('api_handler.php');
 echo "Start"."<br/>";
-$get_data = callAPI('POST', 'https://api-v3.igdb.com/release_dates/', 'fields *; where total_rating > 0 & date > 1538129354; sort date desc; limit 20;');
+$get_data = callAPI('POST', 'https://api-v3.igdb.com/release_dates/', 'fields *; where date > 1538129354 & game.total_rating > 0; sort date desc; limit 20;');
 $response = json_decode($get_data, true);
 echo "Entire Response: ";
 echo "<br />";
@@ -12,9 +12,9 @@ echo "<br />";
 echo "Game Names by Recent Releases: ";
 echo "<br />";
 foreach ($response as $res) {
-  echo 'Name: ' . $res['name'] . '<br>';
-  echo 'Rating: ' . $res['total_rating'] . '<br>';
-  echo 'Platforms: ' . $res['platforms'][0] . '<br>';
+  echo 'Name: ' . $res['game']['name'] . '<br>';
+  echo 'Rating: ' . $res['game']['total_rating'] . '<br>';
+  echo 'Platforms: ' . $res['game']['platforms'][0] . '<br>';
 }
 
 echo "<br />";
