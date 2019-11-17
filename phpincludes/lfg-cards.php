@@ -2,17 +2,20 @@
 session_start();
 require_once('api_handler.php');
 echo "Start"."<br/>";
-$get_data = callAPI('POST', 'https://api-v3.igdb.com/games/', 'fields name; limit 20;');
+$get_data = callAPI('POST', 'https://api-v3.igdb.com/games/', 'fields name,rating,platforms,popularity; sort popularity desc; limit 20;');
 $response = json_decode($get_data, true);
 echo "Entire Response: ";
 echo "<br />";
 print_r($response);
 echo "<br />";
 
-echo "Game Names: ";
+echo "Game Names by Popularity: ";
 echo "<br />";
 foreach ($response as $res) {
-  echo $res['name'] . '<br>';
+  echo 'Name: ' . $res['name'] . '<br>';
+  echo 'Popularity: ' . $res['popularity'] . '<br>';
+  echo 'Rating: ' . $res['rating'] . '<br>';
+  echo 'Platforms: ' . $res['platforms'] . '<br>';
 }
 
 echo "<br />";
