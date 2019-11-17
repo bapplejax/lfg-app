@@ -2,7 +2,10 @@
 session_start();
 
 $username = $_POST['username'];
+// User entered password
 $password = $_POST['password'];
+// Hashed result of user entered password
+$password_hash = password_hash($password, PASSWORD_BCRYPT);
 
 require_once '../vendor/autoload.php';
 
@@ -37,7 +40,7 @@ if($user === false){
   //User account found. Check to see if the given password matches
 
   //If $validPassword is TRUE, the login has been successful.
-  if($password == $user['password']){
+  if(password_verify($password, $password_hash)){
     $_SESSION['logged_in'] = true;
     $_SESSION['status'] = 'success';
     $_SESSION['messages'] = "Login successful!";

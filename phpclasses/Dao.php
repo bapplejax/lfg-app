@@ -34,8 +34,10 @@
         header("Location: https://thawing-savannah-68398.herokuapp.com/create-user.php");
         exit();
       } else {
-        //Securly insert into database
+        //Securely insert into database
         $createQuery = "insert into user (username,password,created_on,region,email) values (:username, :password, :created_on, :region, :email)";
+
+        $password = password_hash($password, PASSWORD_BCRYPT);
 
         $q = $conn->prepare($createQuery);
         $q->bindParam(":username", $username);

@@ -29,6 +29,10 @@ if (empty($_POST['password'])) {
   $messages[] = "Please enter a password";
 }
 
+if (strlen($_POST['password'])<8) {
+  $messages[] = "Please enter a password longer than 7 characters";
+}
+
 if (empty($_POST['email'])) {
   $messages[] = "Please enter an email address";
 }
