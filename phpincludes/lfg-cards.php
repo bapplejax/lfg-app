@@ -2,12 +2,15 @@
 session_start();
 require_once('api_handler.php');
 echo "Start"."<br/>";
-$get_data = callAPI('POST', 'https://api-v3.igdb.com/games/', 'fields name,total_rating,platforms; sort total_rating desc; limit 20;');
+//$get_data = callAPI('POST', 'https://api-v3.igdb.com/games/', 'fields name,total_rating,platforms; sort total_rating desc; limit 20;');
+
+$get_data = callAPI('POST', 'https://api-v3.igdb.com/genres/', 'fields *; where id = (8,9,11);');
+
 $response = json_decode($get_data, true);
 echo "Entire Response: ";
 echo "<br />";
 print_r($response);
-echo "<br />";
+echo "<br /><br />";
 
 echo "Game Names by Popularity: ";
 echo "<br />";
@@ -22,7 +25,7 @@ echo "<br />";
 $errors = $response['response']['errors'];
 $data = $response['response']['data'][0];
 echo "Errors: " . $errors . "<br />";
-echo "Data: " . $data;
+echo "Data: " . $data . "<br />";
 ?>
 
 <div class="lfg-cards__form-wrapper">
