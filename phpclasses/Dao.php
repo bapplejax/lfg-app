@@ -38,6 +38,8 @@
         $createQuery = "insert into user (username,password,created_on,region,email) values (:username, :password, :created_on, :region, :email)";
 
         $password = password_hash($password, PASSWORD_BCRYPT);
+        $username = htmlspecialchars($username);
+        $email = htmlspecialchars($email);
 
         $q = $conn->prepare($createQuery);
         $q->bindParam(":username", $username);

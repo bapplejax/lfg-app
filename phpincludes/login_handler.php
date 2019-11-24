@@ -1,7 +1,9 @@
 <?php
 session_start();
 
+// Username and then wrap with method to prevent sql injection
 $username = $_POST['username'];
+$username = htmlspecialchars($username);
 // User entered password
 $password = $_POST['password'];
 // Hashed result of user entered password
