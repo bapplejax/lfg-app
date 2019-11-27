@@ -17,6 +17,7 @@ echo "Game Names by Popularity: ";
 echo "<br />";
 foreach ($response as $res) {
   $platform = '';
+  $image_url = $res['cover']['url'];
   echo 'Name: ' . $res['name'] . '<br/>';
   echo 'Platforms: ' . '<br/>';
 
@@ -37,7 +38,8 @@ foreach ($response as $res) {
     }
   }
   echo "<br/>";
-  echo '<img src="http:' . $res['cover']['url'] . '"/>' . '<br/>';
+  $new_image_url = str_replace($image_url, 't_thumb', 't_cover_big');
+  echo '<img src="http:' . $new_image_url . '"/>' . '<br/>';
 }
 
 echo "<br />";
