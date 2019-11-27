@@ -16,13 +16,12 @@ echo "<br /><br />";
 echo "Game Names by Popularity: ";
 echo "<br />";
 foreach ($response as $res) {
-  $platform_id = '';
+  $platform = '';
   echo 'Name: ' . $res['name'] . '<br/>';
   echo 'Platforms: ' . '<br/>';
   foreach ($res['platforms'] as $platform) {
-    $platform_id .= $platform_id[0]['id'];
+    echo $platform;
   }
-  echo $platform_id;
   echo '<br/>';
   echo '<img src="http:' . $res['cover']['url'] . '"/>' . '<br/>';
 }
