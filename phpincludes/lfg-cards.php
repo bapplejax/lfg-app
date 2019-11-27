@@ -97,11 +97,11 @@ $response = json_decode($get_data, true);
 
       echo '</div>';
 
-      foreach ($res['genres'][0] as $genre) {
+      foreach ($res['genres'] as $genre) {
         echo $genre['name'] . '</br>';
       }
 
-      foreach ($res['game_modes'][0] as $game_mode) {
+      foreach ($res['game_modes'] as $game_mode) {
         echo $game_mode['name'] . '</br>';
       }
 
