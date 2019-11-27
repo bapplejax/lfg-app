@@ -3,7 +3,7 @@ session_start();
 require_once('api_handler.php');
 // DEBUGGING AREA
 //echo "Start"."<br/>";
-$get_data = callAPI('POST', 'https://api-v3.igdb.com/games/', 'fields name,platforms,cover.url,popularity,summary; 
+$get_data = callAPI('POST', 'https://api-v3.igdb.com/games/', 'fields name,platforms,cover,popularity,summary,genres,game_modes; 
 where platforms.id = (6,48,49,130); 
 sort popularity desc; 
 limit 12;');
@@ -94,7 +94,16 @@ $response = json_decode($get_data, true);
             break;
         }
       }
-      echo '</div><a href="javascript:;" class="lfg-card__summary-js">Game Summary</a><div class="lfg-card__summary"><span class="lfg-card__summary-close">X</span>' . $res['summary'] . '</div></div>';
+
+      foreach ($res['genres'][0]['name'] as $genre) {
+        echo $genre . '</br>';
+      }
+
+      foreach ($res['game_modes'][0]['name'] as $game_mode) {
+        echo $game_mode . '</br>';
+      }
+
+      echo '</div><a href="javascript:;" class="lfg-card__summary-js">Game Details</a><div class="lfg-card__summary"><span class="lfg-card__summary-close">X</span>' . $res['summary'] . '</div></div>';
     }
     ?>
 </div>
