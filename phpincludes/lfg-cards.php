@@ -94,7 +94,7 @@ $response = json_decode($get_data, true);
             break;
         }
       }
-      echo '</div><a href="#" class="lfg-card__summary-js">Game Summary</a><div class="lfg-card__summary"><span class="lfg-card__summary-close">X</span>' . $res['summary'] . '</div></div>';
+      echo '</div><a href="javascript:;" class="lfg-card__summary-js">Game Summary</a><div class="lfg-card__summary"><span class="lfg-card__summary-close">X</span>' . $res['summary'] . '</div></div>';
     }
     ?>
 </div>
