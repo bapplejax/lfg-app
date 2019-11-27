@@ -33,7 +33,7 @@ $(document).ready( function(){
   setTimeout(fade_out, 5000);
 
   // Card Summary Open
-  const summaryOpen = $('lfg-card__summary-js');
+  const summaryOpen = $('.lfg-card__summary-js');
 
   summaryOpen.click(function(){
     console.log('clicked on open');
@@ -42,11 +42,10 @@ $(document).ready( function(){
   });
 
   // Card Summary Close
-  const summaryClose = $('lfg-card__summary-close');
-
-  console.log('clicked on close');
+  const summaryClose = $('.lfg-card__summary-close');
 
   summaryClose.click(function () {
+    console.log('clicked on close');
     this.parent().removeClass('show-summary');
   });
 
