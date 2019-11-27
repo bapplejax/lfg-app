@@ -36,8 +36,8 @@ $(document).ready( function(){
   const summaryOpen = $('lfg-card__summary-js');
 
   summaryOpen.click(function(){
-    summaryOpen.removeClass('show-summary');
-    this.addClass('show-summary');
+    $(document).find('show-summary').removeClass('show-summary');
+    this.siblings('.lfg-card__summary').addClass('show-summary');
   });
 
   // Card Summary Close

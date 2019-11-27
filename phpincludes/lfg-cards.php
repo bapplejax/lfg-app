@@ -73,7 +73,7 @@ $response = json_decode($get_data, true);
 
       echo '<div class="lfg-card">';
 
-      echo '<img src="http:' . $new_image_url . '"/>' . '<br/>';
+      echo '<img src="https:' . $new_image_url . '"/>' . '<br/>';
 
       echo '<p class="lfg-card__title">' . $res['name'] . '</p>';
 
@@ -94,8 +94,7 @@ $response = json_decode($get_data, true);
             break;
         }
       }
-      echo '</div><a href="#" class="lfg-card__summary-js">Game Summary</a></div>';
-      echo '<div class="lfg-card__summary"><span class="lfg-card__summary-close">X</span>' . $res['summary'] . '</div>';
+      echo '</div><a href="#" class="lfg-card__summary-js">Game Summary</a><div class="lfg-card__summary"><span class="lfg-card__summary-close">X</span>' . $res['summary'] . '</div></div>';
     }
     ?>
 </div>
