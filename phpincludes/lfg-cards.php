@@ -38,7 +38,7 @@ foreach ($response as $res) {
     }
   }
   echo "<br/>";
-  $new_image_url = str_replace($image_url, 't_thumb', 't_cover_big');
+  $new_image_url = str_replace('t_thumb', 't_cover_big', $image_url);
   echo '<img src="http:' . $new_image_url . '"/>' . '<br/>';
 }
 
