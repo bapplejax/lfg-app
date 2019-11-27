@@ -109,7 +109,7 @@ $response = json_decode($get_data, true);
         echo $game_mode['name'] . ', ';
       }
 
-      echo '</p><p class="lfg-card__detail-title">Game Summary</p><p>' . $res['summary'] . '</p></div></div>';
+      echo '</p><p class="lfg-card__detail-title">Game Summary</p><p class="lfg-card__detail">' . $res['summary'] . '</p></div></div>';
     }
     ?>
 </div>
