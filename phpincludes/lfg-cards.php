@@ -95,15 +95,17 @@ $response = json_decode($get_data, true);
         }
       }
 
-      foreach ($res['genres'] as $genre) {
-        echo $genre[0]['name'] . '</br>';
+      echo '</div>';
+
+      foreach ($res['genres'][0] as $genre) {
+        echo $genre['name'] . '</br>';
       }
 
-      foreach ($res['game_modes'] as $game_mode) {
-        echo $game_mode[0]['name'] . '</br>';
+      foreach ($res['game_modes'][0] as $game_mode) {
+        echo $game_mode['name'] . '</br>';
       }
 
-      echo '</div><a href="javascript:;" class="lfg-card__summary-js">Game Details</a><div class="lfg-card__summary"><span class="lfg-card__summary-close">X</span>' . $res['summary'] . '</div></div>';
+      echo '<a href="javascript:;" class="lfg-card__summary-js">Game Details</a><div class="lfg-card__summary"><span class="lfg-card__summary-close">X</span>' . $res['summary'] . '</div></div>';
     }
     ?>
 </div>
