@@ -97,15 +97,19 @@ $response = json_decode($get_data, true);
 
       echo '</div>';
 
+      echo '<a href="javascript:;" class="lfg-card__summary-js">Game Details</a><div class="lfg-card__summary"><span class="lfg-card__summary-close">X</span><p>Game Genre(s)</p><p>';
+
       foreach ($res['genres'] as $genre) {
         echo $genre['name'] . '</br>';
       }
+
+      echo '</p><p>Game Modes</p><p>';
 
       foreach ($res['game_modes'] as $game_mode) {
         echo $game_mode['name'] . '</br>';
       }
 
-      echo '<a href="javascript:;" class="lfg-card__summary-js">Game Details</a><div class="lfg-card__summary"><span class="lfg-card__summary-close">X</span>' . $res['summary'] . '</div></div>';
+      echo '</p><p>Game Summary</p><p>' . $res['summary'] . '</p></div></div>';
     }
     ?>
 </div>
