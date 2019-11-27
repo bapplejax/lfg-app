@@ -19,25 +19,28 @@ foreach ($response as $res) {
   $platform = '';
   echo 'Name: ' . $res['name'] . '<br/>';
   echo 'Platforms: ' . '<br/>';
+
   foreach ($res['platforms'] as $platform) {
-    echo $platform;
+    switch ($platform) {
+      case 6:
+        echo "<img src=\"/img/icons/pc.jpg\" alt=\"\" />";
+        break;
+      case 48:
+        echo "<img src=\"/img/icons/playstation.png\" alt=\"\" />";
+        break;
+      case 49:
+        echo "<img src=\"/img/icons/xbox.png\" alt=\"\" />";
+        break;
+      case 130:
+        echo "<img src=\"/img/icons/switch.png\" alt=\"\" />";
+        break;
+    }
   }
-  echo '<br/>';
+  echo "<br/>";
   echo '<img src="http:' . $res['cover']['url'] . '"/>' . '<br/>';
 }
 
 echo "<br />";
-
-
-foreach($apubs as $apub) {
-  $sauthors = '';
-  $stitle = $apub['sarticle'];
-  foreach($apub['authors'] as $author) {
-    $sauthors .= $author['slast'].", ".$author['sfirst']."; ";
-  }
-
-  echo "$sauthors<br />\n$stitle<br />\n";
-}
 
 $errors = $response['response']['errors'];
 $data = $response['response']['data'][0];
