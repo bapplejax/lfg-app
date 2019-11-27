@@ -13,37 +13,6 @@ echo "<br />";
 print_r($response);
 echo "<br /><br />";
 
-echo "Game Names by Popularity: ";
-echo "<br />";
-foreach ($response as $res) {
-  $platform = '';
-  $image_url = $res['cover']['url'];
-  echo 'Name: ' . $res['name'] . '<br/>';
-  echo 'Platforms: ' . '<br/>';
-
-  foreach ($res['platforms'] as $platform) {
-    switch ($platform) {
-      case 6:
-        echo "<img src=\"/img/icons/pc.jpg\" alt=\"\" />";
-        break;
-      case 48:
-        echo "<img src=\"/img/icons/playstation.png\" alt=\"\" />";
-        break;
-      case 49:
-        echo "<img src=\"/img/icons/xbox.png\" alt=\"\" />";
-        break;
-      case 130:
-        echo "<img src=\"/img/icons/switch.png\" alt=\"\" />";
-        break;
-    }
-  }
-  echo "<br/>";
-  $new_image_url = str_replace('t_thumb', 't_cover_big', $image_url);
-  echo '<img src="http:' . $new_image_url . '"/>' . '<br/>';
-}
-
-echo "<br />";
-
 $errors = $response['response']['errors'];
 $data = $response['response']['data'][0];
 echo "Errors: " . $errors . "<br />";
@@ -95,40 +64,36 @@ echo "Data: " . $data . "<br />";
 </div>
 
 <div class="lfg-cards__results">
-  <div class="lfg-card">
-    <img src="https://www.fillmurray.com/400/800" />
-    <p class="lfg-card__title">Game Title</p>
-    <div class="lfg-card__platforms">
-      <img src="/img/icons/pc.jpg" alt="" />
-    </div>
-  </div>
-  <div class="lfg-card">
-    <img src="https://www.fillmurray.com/400/800" />
-    <p class="lfg-card__title">Game Title</p>
-    <div class="lfg-card__platforms">
-      <img src="/img/icons/playstation.png" alt="" />
-    </div>
-  </div>
-  <div class="lfg-card">
-    <img src="https://www.fillmurray.com/400/800" />
-    <p class="lfg-card__title">Game Title</p>
-    <div class="lfg-card__platforms">
-      <img src="/img/icons/xbox.png" alt="" />
-    </div>
-  </div>
-  <div class="lfg-card">
-    <img src="https://www.fillmurray.com/400/800" />
-    <p class="lfg-card__title">Game Title</p>
-    <div class="lfg-card__platforms">
-      <img src="/img/icons/switch.png" alt="" />
-    </div>
-  </div>
-  <div class="lfg-card">
-    <img src="https://www.fillmurray.com/400/800" />
-    <p class="lfg-card__title">Game Title</p>
-    <div class="lfg-card__platforms">
-      <img src="/img/icons/pc.jpg" alt="" />
-      <img src="/img/icons/switch.png" alt="" />
-    </div>
-  </div>
+    <?php
+    foreach ($response as $res) {
+      $platform = '';
+      $image_url = $res['cover']['url'];
+      $new_image_url = str_replace('t_thumb', 't_cover_big', $image_url);
+
+      echo '<div class="lfg-card">';
+
+      echo '<img src="http:' . $new_image_url . '"/>' . '<br/>';
+
+      echo '<p class="lfg-card__title">' . $res['name'] . '</p>';
+
+      echo '<div class="lfg-card__platforms">';
+      foreach ($res['platforms'] as $platform) {
+        switch ($platform) {
+          case 6:
+            echo "<img src=\"/img/icons/pc.jpg\" alt=\"\" />";
+            break;
+          case 48:
+            echo "<img src=\"/img/icons/playstation.png\" alt=\"\" />";
+            break;
+          case 49:
+            echo "<img src=\"/img/icons/xbox.png\" alt=\"\" />";
+            break;
+          case 130:
+            echo "<img src=\"/img/icons/switch.png\" alt=\"\" />";
+            break;
+        }
+      }
+      echo '</div></div>';
+    }
+    ?>
 </div>
