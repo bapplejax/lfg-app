@@ -2,9 +2,10 @@
 session_start();
 require_once('api_handler.php');
 echo "Start"."<br/>";
-$get_data = callAPI('POST', 'https://api-v3.igdb.com/games/', 'fields name,platforms.name,platforms.platform_logo.url,cover.url,popularity; 
-where platforms.name = "PC (Microsoft Windows)" | platforms.name = "XBox One" | platforms.name = "Nintendo Switch" | platforms.name = "PlayStation 4"; 
-sort popularity desc; limit 10;');
+$get_data = callAPI('POST', 'https://api-v3.igdb.com/games/', 'fields name,platforms,cover.url,popularity; 
+where platforms.id = (6,48,49,130); 
+sort popularity desc; 
+limit 10;');
 
 $response = json_decode($get_data, true);
 echo "Entire Response: ";
@@ -16,10 +17,12 @@ echo "Game Names by Popularity: ";
 echo "<br />";
 foreach ($response as $res) {
   echo 'Name: ' . $res['name'] . '<br/>';
-  echo 'Rating: ' . $res['total_rating'] . '<br/>';
-  echo 'Platforms: ' . $res['platforms'][0]['name'] . '<br/>';
+  echo 'Platforms: ' . '<br/>';
+  foreach ($res['platforms'][0]['id'] as $r) {
+    echo $r . '<br/>';
+  }
+  echo '<br/>';
   echo '<img src="http:' . $res['cover']['url'] . '"/>' . '<br/>';
-  echo '<img src="http:' . $res['platforms'][0]['platform_logo']['url'] . '"/>';
 }
 
 echo "<br />";
