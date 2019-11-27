@@ -32,4 +32,19 @@ $(document).ready( function(){
   };
   setTimeout(fade_out, 5000);
 
+  // Card Summary Open
+  const summaryOpen = $('lfg-card__summary-js');
+
+  summaryOpen.click(function(){
+    summaryOpen.removeClass('show-summary');
+    this.addClass('show-summary');
+  });
+
+  // Card Summary Close
+  const summaryClose = $('lfg-card__summary-close');
+
+  summaryClose.click(function () {
+    this.parent().removeClass('show-summary');
+  });
+
 });

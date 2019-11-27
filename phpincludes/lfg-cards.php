@@ -1,22 +1,23 @@
 <?php
 session_start();
 require_once('api_handler.php');
-echo "Start"."<br/>";
-$get_data = callAPI('POST', 'https://api-v3.igdb.com/games/', 'fields name,platforms,cover.url,popularity; 
+// DEBUGGING AREA
+//echo "Start"."<br/>";
+$get_data = callAPI('POST', 'https://api-v3.igdb.com/games/', 'fields name,platforms,cover.url,popularity,summary; 
 where platforms.id = (6,48,49,130); 
 sort popularity desc; 
-limit 10;');
+limit 12;');
 
 $response = json_decode($get_data, true);
-echo "Entire Response: ";
-echo "<br />";
-print_r($response);
-echo "<br /><br />";
-
-$errors = $response['response']['errors'];
-$data = $response['response']['data'][0];
-echo "Errors: " . $errors . "<br />";
-echo "Data: " . $data . "<br />";
+//echo "Entire Response: ";
+//echo "<br />";
+//print_r($response);
+//echo "<br /><br />";
+//
+//$errors = $response['response']['errors'];
+//$data = $response['response']['data'][0];
+//echo "Errors: " . $errors . "<br />";
+//echo "Data: " . $data . "<br />";
 ?>
 
 <div class="lfg-cards__form-wrapper">
@@ -93,7 +94,8 @@ echo "Data: " . $data . "<br />";
             break;
         }
       }
-      echo '</div></div>';
+      echo '</div><a href="#" class="lfg-card__summary-js">Game Summary</a></div>';
+      echo '<div class="lfg-card__summary"><span class="lfg-card__summary-close">X</span>' . $res['summary'] . '</div>';
     }
     ?>
 </div>
