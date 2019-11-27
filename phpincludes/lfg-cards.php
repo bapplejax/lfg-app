@@ -16,16 +16,29 @@ echo "<br /><br />";
 echo "Game Names by Popularity: ";
 echo "<br />";
 foreach ($response as $res) {
+  $platform_id = '';
   echo 'Name: ' . $res['name'] . '<br/>';
   echo 'Platforms: ' . '<br/>';
-  foreach ($res['platforms'][0]['id'] as $r) {
-    echo $r . '<br/>';
+  foreach ($res['platforms'] as $platform) {
+    $platform_id .= $platform_id[0]['id'];
   }
+  echo $platform_id;
   echo '<br/>';
   echo '<img src="http:' . $res['cover']['url'] . '"/>' . '<br/>';
 }
 
 echo "<br />";
+
+
+foreach($apubs as $apub) {
+  $sauthors = '';
+  $stitle = $apub['sarticle'];
+  foreach($apub['authors'] as $author) {
+    $sauthors .= $author['slast'].", ".$author['sfirst']."; ";
+  }
+
+  echo "$sauthors<br />\n$stitle<br />\n";
+}
 
 $errors = $response['response']['errors'];
 $data = $response['response']['data'][0];
