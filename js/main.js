@@ -36,15 +36,14 @@ $(document).ready( function(){
   const summaryOpen = $('.lfg-card__summary-js');
 
   summaryOpen.click(function(){
-    $(document).find('.show-summary').removeClass('show-summary');
-    $(this).parent().find('.lfg-card__summary').addClass('show-summary');
+    $(document).find('.lfg-card__summary').fadeOut(500);
+    $(this).parent().find('.lfg-card__summary').fadeIn(500);
   });
 
   // Card Summary Close
   const summaryClose = $('.lfg-card__summary-close');
 
   summaryClose.click(function () {
-    $(this).parent().removeClass('show-summary');
+    $(this).parent().fadeOut(500);
   });
-
 });
