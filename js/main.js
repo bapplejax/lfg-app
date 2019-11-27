@@ -36,17 +36,15 @@ $(document).ready( function(){
   const summaryOpen = $('.lfg-card__summary-js');
 
   summaryOpen.click(function(){
-    console.log('clicked on open');
-    $(document).find('show-summary').removeClass('show-summary');
-    this.siblings('.lfg-card__summary').addClass('show-summary');
+    $(document).find('.show-summary').removeClass('show-summary');
+    $(this).parent().find('.lfg-card__summary').addClass('show-summary');
   });
 
   // Card Summary Close
   const summaryClose = $('.lfg-card__summary-close');
 
   summaryClose.click(function () {
-    console.log('clicked on close');
-    this.parent().removeClass('show-summary');
+    $(this).parent().removeClass('show-summary');
   });
 
 });
